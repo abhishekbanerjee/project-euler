@@ -1,0 +1,14 @@
+fn main() {
+    let sum = sum_multiples(1000);
+    println!("{}", sum);
+}
+
+fn sum_multiples(n: u32) -> u32 {
+    let mut sum = 0u32;
+    for i in 1..n {
+	if i % 3 == 0 || i % 5 == 0 {
+	    sum += i;
+	}
+    }
+    return sum
+}
