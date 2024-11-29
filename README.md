@@ -15,4 +15,5 @@ Solving [Project Euler](https://projecteuler.net) problems, one commit at a time
 | [Largest Product in a Series](https://projecteuler.net/problem=8) | [problem-00008.rs](rust/problem-00008.rs) | 23514624000  |
 | [Special Pythagorean Triplet](https://projecteuler.net/problem=9) | [problem-00009.rs](rust/problem-00009.rs) | 31875000     |
 | [Summation of Primes](https://projecteuler.net/problem=10)   | [problem-00010.rs](rust/problem-00010.rs) | 142913828922 |
+| [Largest Product in a Grid](https://projecteuler.net/problem=11) | [problem-00011.rs](rust/problem-00011.rs) | 70600674     |
 
