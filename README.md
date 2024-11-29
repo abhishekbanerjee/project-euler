@@ -13,4 +13,5 @@ Solving [Project Euler](https://projecteuler.net) problems, one commit at a time
 | [Sum Square Difference](https://projecteuler.net/problem=6)  | [problem-00006.rs](rust/problem-00006.rs) | 25164150    |
 | [10 001st Prime](https://projecteuler.net/problem=7)         | [problem-00007.rs](rust/problem-00007.rs) | 104743      |
 | [Largest Product in a Series](https://projecteuler.net/problem=8) | [problem-00008.rs](rust/problem-00008.rs) | 23514624000 |
+| [Special Pythagorean Triplet](https://projecteuler.net/problem=9) | [problem-00009.rs](rust/problem-00009.rs) | 31875000    |
 
