@@ -5,6 +5,7 @@ fn main() {
 
 fn largest_palindrome() -> u32 {
     let mut largest = 0u32;
+    // Take all three digit numbers and multiply them. ¯\_(ツ)_/¯
     for a in 100..1000 {
 	for b in 100..1000 {
 	    let product = a*b as u32;

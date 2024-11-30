@@ -8,9 +8,13 @@ fn sum_fibonaccis(n: u64) -> u64 {
     let mut a = 1u64;
     let mut b = 2u64;
     while b <= n {
+	// Check for the condition on the current number and update
+	// the sum.
 	if b % 2 == 0 {
 	    sum += b;
 	}
+	// Keep the last 2 Fibonacci numbers around, and use them to
+	// compute the next one.
 	let c = a + b;
 	a = b;
 	b = c;

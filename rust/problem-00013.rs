@@ -104,6 +104,9 @@ fn main() {
     println!("{}", first_10);
 }
 
+// Just simulate grade school addition algorithm: add individual
+// digits lined up, store the digit and take carry to the next
+// position.
 fn first_10_sum(numbers_joined: &str) -> u64 {
     let numbers = numbers_joined.lines().collect::<Vec<&str>>();
     let mut idx = numbers[0].len() - 1;
@@ -120,8 +123,11 @@ fn first_10_sum(numbers_joined: &str) -> u64 {
     }
     let carry_str = carry.to_string();
     if carry_str.len() >= 10 {
+	// If the carry is big enough, just use its first 10 digits.
 	carry_str[0..10].parse::<u64>().unwrap()
     } else {
+	// Otherwise, keep adding the leading digits from the sum
+	// until done.
 	let mut sum = carry as u64;
 	for _ in carry_str.len()..10 {
 	    sum = sum*10 + digits.pop().expect("Ran out of digits!") as u64;

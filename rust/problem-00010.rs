@@ -3,6 +3,8 @@ fn main() {
     println!("{}", sum);
 }
 
+// We use the Sieve of Eratosthenes method to find primes, and then
+// sum them up.
 fn sum_primes(n: u32) -> u64 {
     let mut sum = 0u64;
     let mut sieve = vec![true; (n+1) as usize];

@@ -26,6 +26,10 @@ fn main() {
     println!("{}", product);
 }
 
+// We parse the string into a 2-d grid of integers. Then from each
+// position in the grid, we check the row (to the right), the column
+// (down), the diagonal (down-right) and the off-diagonal (down-left),
+// where possible.
 fn largest_product(grid_str: &str) -> u32 {
     let grid = parse(grid_str);
     let m = grid.len();
