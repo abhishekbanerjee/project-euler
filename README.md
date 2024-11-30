@@ -17,4 +17,5 @@ Solving [Project Euler](https://projecteuler.net) problems, one commit at a time
 | [Summation of Primes](https://projecteuler.net/problem=10)   | [problem-00010.rs](rust/problem-00010.rs) | 142913828922 |
 | [Largest Product in a Grid](https://projecteuler.net/problem=11) | [problem-00011.rs](rust/problem-00011.rs) | 70600674     |
 | [Highly Divisible Triangular Number](https://projecteuler.net/problem=12) | [problem-00012.rs](rust/problem-00012.rs) | 76576500     |
+| [Large Sum](https://projecteuler.net/problem=13)             | [problem-00013.rs](rust/problem-00013.rs) | 5537376230   |
 
