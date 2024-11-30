@@ -18,4 +18,5 @@ Solving [Project Euler](https://projecteuler.net) problems, one commit at a time
 | [Largest Product in a Grid](https://projecteuler.net/problem=11) | [problem-00011.rs](rust/problem-00011.rs) | 70600674     |
 | [Highly Divisible Triangular Number](https://projecteuler.net/problem=12) | [problem-00012.rs](rust/problem-00012.rs) | 76576500     |
 | [Large Sum](https://projecteuler.net/problem=13)             | [problem-00013.rs](rust/problem-00013.rs) | 5537376230   |
+| [Longest Collatz Sequence](https://projecteuler.net/problem=14) | [problem-00014.rs](rust/problem-00014.rs) | 837799       |
 
