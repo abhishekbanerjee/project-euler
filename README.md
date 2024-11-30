@@ -16,4 +16,5 @@ Solving [Project Euler](https://projecteuler.net) problems, one commit at a time
 | [Special Pythagorean Triplet](https://projecteuler.net/problem=9) | [problem-00009.rs](rust/problem-00009.rs) | 31875000     |
 | [Summation of Primes](https://projecteuler.net/problem=10)   | [problem-00010.rs](rust/problem-00010.rs) | 142913828922 |
 | [Largest Product in a Grid](https://projecteuler.net/problem=11) | [problem-00011.rs](rust/problem-00011.rs) | 70600674     |
+| [Highly Divisible Triangular Number](https://projecteuler.net/problem=12) | [problem-00012.rs](rust/problem-00012.rs) | 76576500     |
 
