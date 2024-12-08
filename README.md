@@ -28,5 +28,6 @@ $ cargo run --bin problem-00001
 | [Large Sum](https://projecteuler.net/problem=13)             | [problem-00013.rs](euler-rust/src/bin/problem-00013.rs) | 5537376230   |
 | [Longest Collatz Sequence](https://projecteuler.net/problem=14) | [problem-00014.rs](euler-rust/src/bin/problem-00014.rs) | 837799       |
 | [Lattice Paths](https://projecteuler.net/problem=15)         | [problem-00015.rs](euler-rust/src/bin/problem-00015.rs) | 137846528820 |
-| [Power Digit Sum](https://projecteuler.net/problem=16)       | [problem-00016.rs](rust/problem-00016.rs)               | 1366         |
+| [Power Digit Sum](https://projecteuler.net/problem=16)       | [problem-00016.rs](euler-rust/src/bin/problem-00016.rs) | 1366         |
+| [Number Letter Counts](https://projecteuler.net/problem=17)  | [problem-00017.rs](euler-rust/src/bin/problem-00017.rs) | 21124        |
 
