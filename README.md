@@ -34,4 +34,5 @@ $ cargo run --bin problem-00001
 | [Counting Sundays](https://projecteuler.net/problem=19)      | [problem-00019.rs](euler-rust/src/bin/problem-00019.rs) | 171          |
 | [Factorial Digit Sum](https://projecteuler.net/problem=20)   | [problem-00020.rs](euler-rust/src/bin/problem-00020.rs) | 648          |
 | [Amicable Numbers](https://projecteuler.net/problem=21)      | [problem-00021.rs](euler-rust/src/bin/problem-00021.rs) | 31626        |
+| [Names Scores](https://projecteuler.net/problem=22)          | [problem-00022.rs](euler-rust/src/bin/problem-00022.rs) | 871198282    |
 | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |

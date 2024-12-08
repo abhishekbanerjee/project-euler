@@ -1,13 +1,12 @@
 use std::cmp;
-use std::fs;
 
 fn main() {
-    let sum = max_path_sum(read_file("resources/0067_triangle.txt").as_str());
+    let sum = max_path_sum_file("resources/0067_triangle.txt");
     println!("{}", sum);
 }
 
-fn read_file(file_path: &str) -> String {
-    fs::read_to_string(file_path).unwrap()
+fn max_path_sum_file(file_name: &str) -> u32 {
+    max_path_sum(euler_rust::read_file(file_name).as_str())
 }
 
 // We parse the string into a 2-d grid of integers. Then we use
@@ -16,7 +15,7 @@ fn read_file(file_path: &str) -> String {
 //
 // This is the exact same method that we used for Problem 18.
 fn max_path_sum(grid_str: &str) -> u32 {
-    let mut grid = euler_rust::parse(grid_str);
+    let mut grid = euler_rust::parse_grid(grid_str);
     for i in (0..(grid.len()-1)).rev() {
 	for j in 0..grid[i].len() {
 	    grid[i][j] += cmp::max(grid[i+1][j], grid[i+1][j+1]);

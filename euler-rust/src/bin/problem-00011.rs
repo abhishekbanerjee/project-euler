@@ -31,7 +31,7 @@ fn main() {
 // (down), the diagonal (down-right) and the off-diagonal (down-left),
 // where possible.
 fn largest_product(grid_str: &str) -> u32 {
-    let grid = euler_rust::parse(grid_str);
+    let grid = euler_rust::parse_grid(grid_str);
     let m = grid.len();
     let n = grid[0].len();
     let mut largest = 1u32;
