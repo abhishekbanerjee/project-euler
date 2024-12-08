@@ -30,4 +30,5 @@ $ cargo run --bin problem-00001
 | [Lattice Paths](https://projecteuler.net/problem=15)         | [problem-00015.rs](euler-rust/src/bin/problem-00015.rs) | 137846528820 |
 | [Power Digit Sum](https://projecteuler.net/problem=16)       | [problem-00016.rs](euler-rust/src/bin/problem-00016.rs) | 1366         |
 | [Number Letter Counts](https://projecteuler.net/problem=17)  | [problem-00017.rs](euler-rust/src/bin/problem-00017.rs) | 21124        |
+| [Maximum Path Sum I](https://projecteuler.net/problem=18)    | [problem-00018.rs](euler-rust/src/bin/problem-00018.rs) | 1074         |
 

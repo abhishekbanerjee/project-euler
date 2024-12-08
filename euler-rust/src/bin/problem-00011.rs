@@ -31,7 +31,7 @@ fn main() {
 // (down), the diagonal (down-right) and the off-diagonal (down-left),
 // where possible.
 fn largest_product(grid_str: &str) -> u32 {
-    let grid = parse(grid_str);
+    let grid = euler_rust::parse(grid_str);
     let m = grid.len();
     let n = grid[0].len();
     let mut largest = 1u32;
@@ -56,16 +56,4 @@ fn largest_product(grid_str: &str) -> u32 {
 	}
     }
     largest
-}
-
-fn parse(grid_str: &str) -> Vec<Vec<u32>> {
-    let mut grid = Vec::new();
-    for line in grid_str.lines() {
-	let mut row = Vec::new();
-	for number in line.split_whitespace() {
-	    row.push(number.parse::<u32>().unwrap());
-	}
-	grid.push(row);
-    }
-    grid
 }
