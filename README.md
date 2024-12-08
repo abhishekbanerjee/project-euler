@@ -32,4 +32,5 @@ $ cargo run --bin problem-00001
 | [Number Letter Counts](https://projecteuler.net/problem=17)  | [problem-00017.rs](euler-rust/src/bin/problem-00017.rs) | 21124        |
 | [Maximum Path Sum I](https://projecteuler.net/problem=18)    | [problem-00018.rs](euler-rust/src/bin/problem-00018.rs) | 1074         |
 | [Counting Sundays](https://projecteuler.net/problem=19)      | [problem-00019.rs](euler-rust/src/bin/problem-00019.rs) | 171          |
+| [Factorial Digit Sum](https://projecteuler.net/problem=20)   | [problem-00020.rs](euler-rust/src/bin/problem-00020.rs) | 648          |
 | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |
