@@ -37,4 +37,5 @@ $ cargo run --bin problem-00001
 | [Names Scores](https://projecteuler.net/problem=22)          | [problem-00022.rs](euler-rust/src/bin/problem-00022.rs) | 871198282    |
 | [Non-Abundant Sums](https://projecteuler.net/problem=23)     | [problem-00023.rs](euler-rust/src/bin/problem-00023.rs) | 4179871      |
 | [Lexicographic Permutations](https://projecteuler.net/problem=24) | [problem-00024.rs](euler-rust/src/bin/problem-00024.rs) | 2783915460   |
+| [1000-digit Fibonacci Number](https://projecteuler.net/problem=25) | [problem-00025.rs](euler-rust/src/bin/problem-00025.rs) | 4782         |
 | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |
