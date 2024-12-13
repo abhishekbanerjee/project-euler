@@ -23,7 +23,14 @@ impl Primes {
 	while self.primes.len() <= index {
 	    self.grow();
 	}
-	return self.primes[index].clone();
+	self.primes[index].clone()
+    }
+
+    pub fn is_prime(&mut self, prime_candidate: usize) -> bool {
+	while self.sieve.len() <= prime_candidate {
+	    self.grow();
+	}
+	self.sieve[prime_candidate].clone()
     }
 
     fn set_up(sieve: &mut [bool], primes: &mut Vec<usize>, start: usize) {
