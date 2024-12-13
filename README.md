@@ -40,4 +40,5 @@ $ cargo run --bin problem-00001
 | 25   | [1000-digit Fibonacci Number](https://projecteuler.net/problem=25) | [problem-00025.rs](euler-rust/src/bin/problem-00025.rs) | 4782         |
 | 26   | [Reciprocal Cycles](https://projecteuler.net/problem=26)     | [problem-00026.rs](euler-rust/src/bin/problem-00026.rs) | 983          |
 | 27   | [Quadratic Primes](https://projecteuler.net/problem=27)      | [problem-00027.rs](euler-rust/src/bin/problem-00027.rs) | -59231       |
+| 28   | [Number Spiral Diagonals](https://projecteuler.net/problem=28) | [problem-00028.rs](euler-rust/src/bin/problem-00028.rs) | 669171001    |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |
