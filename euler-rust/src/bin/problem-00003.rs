@@ -1,3 +1,5 @@
+use euler_rust::utils::primes;
+
 fn main() {
     let prime_factor = largest_prime_factor(600_851_475_143);
     println!("{}", prime_factor);
@@ -8,29 +10,18 @@ fn largest_prime_factor(n: u64) -> u64 {
     // The square root of a number is the largest non-identity factor
     // possible, so we only need to check up until there.
     let root = (n as f64).sqrt().floor() as usize;
-    let mut largest = 0u64;
-    let mut sieve = vec![true; root+1];
-    for factor in 2..=root {
-	// If the number is already marked, it's composite.
-	if !sieve[factor] {
-	    continue;
+    let mut largest = n;
+    let mut primes = primes::Primes::up_to(root+1);
+    let mut prime_idx = 0usize;
+    loop {
+	let prime = primes.prime_number(prime_idx);
+	if prime > root as usize {
+	    break;
 	}
-	// Otherwise mark multiples of the number in the sieve.
-	let mut mark = factor*2;
-	while mark <= root {
-	    sieve[mark] = false;
-	    mark += factor;
+	if n % (prime as u64) == 0 {
+	    largest = prime as u64;
 	}
-	// If the prime divides the number in question, update the
-	// largest found so far.
-	if n % (factor as u64) == 0 {
-	    largest = factor as u64;
-	}
+	prime_idx += 1;
     }
-    // This is true iff we didn't find a prime factor up to the square
-    // root. This means the number itself is prime.
-    if largest == 0 {
-	return n
-    }
-    return largest
+    largest
 }

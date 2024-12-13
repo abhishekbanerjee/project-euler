@@ -1,3 +1,5 @@
+use euler_rust::utils::files;
+
 fn main() {
     let scores = names_scores("resources/0022_names.txt");
     println!("{}", scores);
@@ -17,7 +19,7 @@ fn names_scores(file_path: &str) -> u64 {
 // The file is a single line of comma-separated names, each surrounded
 // by quote marks.
 fn parse_names(file_path: &str) -> Vec<String> {
-    euler_rust::read_file(file_path).split(",").map(|s| {
+    files::read_file(file_path).split(",").map(|s| {
 	let mut s_str = s.to_string();
 	s_str.pop(); // Remove last character.
 	if s_str.len() > 0 { s_str.remove(0); } // Remove first character.

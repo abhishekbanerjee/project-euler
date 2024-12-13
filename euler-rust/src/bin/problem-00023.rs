@@ -1,3 +1,5 @@
+use euler_rust::utils::nums;
+
 fn main() {
     let sum = non_abundant_sums(28_123);
     println!("{}", sum);
@@ -26,5 +28,5 @@ fn non_abundant_sums(limit: u32) -> u64 {
 }
 
 fn is_abundant(n: u32) -> bool {
-    euler_rust::divisors_sum(n) > n
+    nums::divisors_sum(n) > n
 }
