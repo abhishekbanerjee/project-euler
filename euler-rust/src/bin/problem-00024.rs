@@ -1,29 +1,16 @@
+use euler_rust::utils::parse;
+use euler_rust::utils::permutations::Permutations;
+
 fn main() {
     let permutation = lexicographic_permutation_number(1_000_000);
     println!("{}", permutation);
 }
 
 fn lexicographic_permutation_number(n: u32) -> String {
-    let mut state: Vec<u32> = (0..10).collect();
-    for _ in 1..n {
-	next_permutation(state.as_mut_slice());
-    }
-    state.into_iter().map(|i| i.to_string()).collect::<String>()
+    let mut permutations = Permutations::with((0..10).collect::<Vec<u8>>().as_slice());
+    // Move forward n-1 times and don't collect the output.
+    for _ in 0..n-1 { permutations.next_permutation(); }
+    // Next permutation is the one we want. Collect its digits into a
+    // string.
+    parse::parse_slice_as_string(permutations.next_permutation().unwrap())
 }
-
-fn next_permutation(state: &mut [u32]) {
-    let l = state.len();
-    let mut i = l-2;
-    loop {
-	if state[i] < state[i+1] { break; }
-	i -= 1;
-    }
-    let mut j = i+1;
-    while j < l {
-	if state[j] < state[i] { break; }
-	j += 1;
-    }
-    state.swap(j-1, i);
-    state[i+1..].reverse();
-}
-

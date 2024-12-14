@@ -44,4 +44,5 @@ $ cargo run --bin problem-00001
 | 29   | [Distinct Powers](https://projecteuler.net/problem=29)       | [problem-00029.rs](euler-rust/src/bin/problem-00029.rs) | 9183         |
 | 30   | [Digit Fifth Power](https://projecteuler.net/problem=30)     | [problem-00030.rs](euler-rust/src/bin/problem-00030.rs) | 443839       |
 | 31   | [Coin Sums](https://projecteuler.net/problem=31)             | [problem-00031.rs](euler-rust/src/bin/problem-00031.rs) | 73682        |
+| 32   | [Pandigital Products](https://projecteuler.net/problem=32)   | [problem-00032.rs](euler-rust/src/bin/problem-00032.rs) | 45228        |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |
