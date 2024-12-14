@@ -42,4 +42,5 @@ $ cargo run --bin problem-00001
 | 27   | [Quadratic Primes](https://projecteuler.net/problem=27)      | [problem-00027.rs](euler-rust/src/bin/problem-00027.rs) | -59231       |
 | 28   | [Number Spiral Diagonals](https://projecteuler.net/problem=28) | [problem-00028.rs](euler-rust/src/bin/problem-00028.rs) | 669171001    |
 | 29   | [Distinct Powers](https://projecteuler.net/problem=29)       | [problem-00029.rs](euler-rust/src/bin/problem-00029.rs) | 9183         |
+| 30   | [Digit Fifth Power](https://projecteuler.net/problem=30)     | [problem-00030.rs](euler-rust/src/bin/problem-00030.rs) | 443839       |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |
