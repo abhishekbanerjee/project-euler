@@ -1,3 +1,7 @@
+use num_traits::Zero;
+use std::ops::Div;
+use std::ops::Mul;
+use std::ops::Rem;
 
 // Sums up all the divisors of a number except for itself.
 pub fn divisors_sum(n: u32) -> u32 {
@@ -22,4 +26,22 @@ pub fn divisors_sum(n: u32) -> u32 {
 	divisors_sum += root;
     }
     divisors_sum
+}
+
+// We use the formula: LCM(a, b) = a * b / GCD(a, b), where GCD is the
+// greatest common divisor.
+pub fn lcm<T: Div<Output = T> + Mul<Output = T> + Rem<Output = T> + PartialOrd + Zero + Copy>(a: T, b: T) -> T {
+    return a*b/gcd(a,b);
+}
+
+// We use the resursive remainder method to find GCD.
+// TODO: make this iterative.
+pub fn gcd<T: Rem<Output = T> + PartialOrd + Zero + Copy>(a: T, b: T) -> T {
+    if a > b {
+	return gcd(b, a)
+    }
+    if a == T::zero() {
+	return b
+    }
+    gcd(b % a, a)
 }
