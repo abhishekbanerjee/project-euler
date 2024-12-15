@@ -46,4 +46,5 @@ $ cargo run --bin problem-00001
 | 31   | [Coin Sums](https://projecteuler.net/problem=31)             | [problem-00031.rs](euler-rust/src/bin/problem-00031.rs) | 73682        |
 | 32   | [Pandigital Products](https://projecteuler.net/problem=32)   | [problem-00032.rs](euler-rust/src/bin/problem-00032.rs) | 45228        |
 | 33   | [Digit Cancelling Fractions](https://projecteuler.net/problem=33) | [problem-00033.rs](euler-rust/src/bin/problem-00033.rs) | 100          |
+| 34   | [Digit Factorials](https://projecteuler.net/problem=34)      | [problem-00034.rs](euler-rust/src/bin/problem-00034.rs) | 40730        |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |
