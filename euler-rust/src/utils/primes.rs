@@ -33,6 +33,17 @@ impl Primes {
 	self.sieve[prime_candidate].clone()
     }
 
+    pub fn all_primes_below(&mut self, limit: usize) -> Vec<usize> {
+	while self.sieve.len() <= limit {
+	    self.grow();
+	}
+	let idx = match self.primes.binary_search(&limit) {
+	    Ok(i) => i,
+	    Err(i) => i,
+	};
+	self.primes[..idx].to_vec()
+    }
+
     fn set_up(sieve: &mut [bool], primes: &mut Vec<usize>, start: usize) {
 	for current_factor in start..sieve.len() {
 	    if sieve[current_factor] {
