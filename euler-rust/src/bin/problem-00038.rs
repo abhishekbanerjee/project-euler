@@ -1,5 +1,5 @@
 use std::collections::HashSet;
-use euler_rust::utils::nums;
+use euler_rust::utils::parse;
 
 fn main() {
     let largest = largest_pandigital_multiple(vec![1u32, 2, 3, 4, 5, 6, 7, 8, 9]);
@@ -19,7 +19,7 @@ fn largest_pandigital_multiple(digits: Vec<u32>) -> u64 {
 	// be the multiplicand itself, if its first digit is less than
 	// the first digit of the largest pandigital number we've
 	// found so far, we can discard this.
-	if nums::first_digit(n) < largest_first {
+	if parse::first_digit(n) < largest_first {
 	    continue;
 	}
 	let mut candidate_set: HashSet<u32> = HashSet::new();
@@ -30,7 +30,7 @@ fn largest_pandigital_multiple(digits: Vec<u32>) -> u64 {
 	// limit.
 	for m in 1..=5 {
 	    // Loop over the digits of the product.
-	    for digit in nums::split_digits(n*m, 10u32) {
+	    for digit in parse::split_number_to_digits(n*m).iter() {
 		// If the digit is not in our pandigital set, or we've
 		// encountered it already, declare failure for this
 		// multiplicand.
@@ -46,7 +46,7 @@ fn largest_pandigital_multiple(digits: Vec<u32>) -> u64 {
 	    }
 	    // We have a match!
 	    if candidate_set.len() == l {
-		let candidate = nums::collect_digits(candidate_vec.as_slice(), 10u64);
+		let candidate : u64 = parse::parse_slice_as_number(candidate_vec.as_slice());
 		// Check and update the largest, if needed.
 		if candidate > largest {
 		    largest = candidate;

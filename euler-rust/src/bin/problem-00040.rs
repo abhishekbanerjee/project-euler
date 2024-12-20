@@ -1,4 +1,4 @@
-use euler_rust::utils::nums;
+use euler_rust::utils::parse;
 
 fn main() {
     let product = champernowne_product(vec![1u32, 10, 100, 1_000, 10_000, 100_000, 1_000_000]);
@@ -31,6 +31,6 @@ fn champernowne_number(mut index: u32) -> u32 {
 	// it's position in that number.
 	let target = 10u32.pow(d-1) + (index - 1) / d;
 	let pos = (index-1) % d;
-	return nums::nth_digit(target, pos as usize);
+	return parse::nth_digit(target, pos as usize);
     }
 }

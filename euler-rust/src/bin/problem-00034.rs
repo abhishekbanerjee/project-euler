@@ -1,4 +1,4 @@
-use euler_rust::utils::nums;
+use euler_rust::utils::parse;
 
 fn main() {
     let sum = sum_digit_factorials();
@@ -17,8 +17,8 @@ fn sum_digit_factorials() -> u32 {
     let limit = digit_factorials[9] * (digit_factorials[9].to_string().len() as u32 + 1);
     for n in 3..limit {
 	let mut f = 0u32;
-	for digit in nums::split_digits(n, 10u32).iter() {
-	    f += digit_factorials[*digit as usize];
+	for digit in parse::split_number_to_digits::<u32, usize>(n).iter() {
+	    f += digit_factorials[*digit];
 	}
 	if f == n {
 	    sum += n;
