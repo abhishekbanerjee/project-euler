@@ -52,4 +52,5 @@ $ cargo run --bin problem-00001
 | 37   | [Truncatable Primes](https://projecteuler.net/problem=37)    | [problem-00037.rs](euler-rust/src/bin/problem-00037.rs) | 748317       |
 | 38   | [Pandigital Multiples](https://projecteuler.net/problem=38)  | [problem-00038.rs](euler-rust/src/bin/problem-00038.rs) | 932718654    |
 | 39   | [Integer Right Triangles](https://projecteuler.net/problem=39) | [problem-00039.rs](euler-rust/src/bin/problem-00039.rs) | 840          |
+| 40   | [Champernowne's Constant](https://projecteuler.net/problem=40) | [problem-00040.rs](euler-rust/src/bin/problem-00040.rs) | 210          |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |

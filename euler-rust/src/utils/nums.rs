@@ -1,5 +1,6 @@
 use num_traits::Zero;
 use std::fmt::Debug;
+use std::fmt::Display;
 use std::ops::Add;
 use std::ops::Div;
 use std::ops::Mul;
@@ -70,6 +71,15 @@ pub fn collect_digits<T: Add + Copy + Mul<Output = T> + Zero>(digits: &[T], base
 }
 
 // Extracts the first digit of the given number.
-pub fn first_digit<T: FromStr<Err: Debug> + ToString>(n: T) -> T {
-    n.to_string()[..1].parse::<T>().expect("Does not have a first digit!")
+pub fn first_digit<T: Display + FromStr<Err: Debug> + ToString>(n: T) -> T {
+    nth_digit(n, 0usize)
+}
+
+// Extracts the n-th (0-based) digit of the given number (written from
+// left to right).
+pub fn nth_digit<T: Display + FromStr<Err: Debug> + ToString>(number: T, idx: usize) -> T {
+    number
+	.to_string()[(idx)..(idx+1)]
+	.parse::<T>()
+	.expect(format!("{} does not have a {}-th digit!", number, idx).as_str())
 }
