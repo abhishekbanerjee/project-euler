@@ -1,3 +1,5 @@
+use euler_rust::utils::nums;
+
 fn main() {
     let sum = sum_digit_factorials();
     println!("{}", sum);
@@ -15,7 +17,7 @@ fn sum_digit_factorials() -> u32 {
     let limit = digit_factorials[9] * (digit_factorials[9].to_string().len() as u32 + 1);
     for n in 3..limit {
 	let mut f = 0u32;
-	for digit in split_digits(n).iter() {
+	for digit in nums::split_digits(n, 10u32).iter() {
 	    f += digit_factorials[*digit as usize];
 	}
 	if f == n {
@@ -23,14 +25,4 @@ fn sum_digit_factorials() -> u32 {
 	}
     }
     sum
-}
-
-fn split_digits(n: u32) -> Vec<u8> {
-    let mut m = n.clone();
-    let mut digits = Vec::new();
-    while m != 0 {
-	digits.push((m % 10) as u8);
-	m /= 10;
-    }
-    digits
 }

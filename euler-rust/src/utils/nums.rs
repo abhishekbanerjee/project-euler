@@ -1,7 +1,10 @@
 use num_traits::Zero;
+use std::fmt::Debug;
+use std::ops::Add;
 use std::ops::Div;
 use std::ops::Mul;
 use std::ops::Rem;
+use std::str::FromStr;
 
 // Sums up all the divisors of a number except for itself.
 pub fn divisors_sum(n: u32) -> u32 {
@@ -44,4 +47,29 @@ pub fn gcd<T: Rem<Output = T> + PartialOrd + Zero + Copy>(a: T, b: T) -> T {
 	return b
     }
     gcd(b % a, a)
+}
+
+// Splits the digits of the number written out in the given base.
+pub fn split_digits<T: Clone + Copy + Div<Output = T> + PartialEq + Rem<Output = T> + Zero>(n: T, base: T) -> Vec<T> {
+    let mut m = n.clone();
+    let mut digits = Vec::new();
+    while m != T::zero() {
+	digits.insert(0, m % base);
+	m = m / base;
+    }
+    digits
+}
+
+// Converts the digits (in the given base) to the constituent number.
+pub fn collect_digits<T: Add + Copy + Mul<Output = T> + Zero>(digits: &[T], base: T) -> T {
+    let mut n = T::zero();
+    for digit in digits.iter() {
+	n = n * base + *digit;
+    }
+    n
+}
+
+// Extracts the first digit of the given number.
+pub fn first_digit<T: FromStr<Err: Debug> + ToString>(n: T) -> T {
+    n.to_string()[..1].parse::<T>().expect("Does not have a first digit!")
 }
