@@ -51,4 +51,5 @@ $ cargo run --bin problem-00001
 | 36   | [Double-base Palindromes](https://projecteuler.net/problem=36) | [problem-00036.rs](euler-rust/src/bin/problem-00036.rs) | 872187       |
 | 37   | [Truncatable Primes](https://projecteuler.net/problem=37)    | [problem-00037.rs](euler-rust/src/bin/problem-00037.rs) | 748317       |
 | 38   | [Pandigital Multiples](https://projecteuler.net/problem=38)  | [problem-00038.rs](euler-rust/src/bin/problem-00038.rs) | 932718654    |
+| 39   | [Integer Right Triangles](https://projecteuler.net/problem=39) | [problem-00039.rs](euler-rust/src/bin/problem-00039.rs) | 840          |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |
