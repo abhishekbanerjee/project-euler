@@ -56,4 +56,5 @@ $ cargo run --bin problem-00001
 | 41   | [Pandigital Prime](https://projecteuler.net/problem=41)      | [problem-00041.rs](euler-rust/src/bin/problem-00041.rs) | 7652413      |
 | 42   | [Coded Triangle Numbers](https://projecteuler.net/problem=42) | [problem-00042.rs](euler-rust/src/bin/problem-00042.rs) | 162          |
 | 43   | [Sub-string Divisibility](https://projecteuler.net/problem=43) | [problem-00043.rs](euler-rust/src/bin/problem-00043.rs) | 16695334890  |
+| 44   | [Pentagon Numbers](https://projecteuler.net/problem=44)      | [problem-00044.rs](euler-rust/src/bin/problem-00044.rs) | 5482660      |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |
