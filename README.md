@@ -54,4 +54,5 @@ $ cargo run --bin problem-00001
 | 39   | [Integer Right Triangles](https://projecteuler.net/problem=39) | [problem-00039.rs](euler-rust/src/bin/problem-00039.rs) | 840          |
 | 40   | [Champernowne's Constant](https://projecteuler.net/problem=40) | [problem-00040.rs](euler-rust/src/bin/problem-00040.rs) | 210          |
 | 41   | [Pandigital Prime](https://projecteuler.net/problem=41)      | [problem-00041.rs](euler-rust/src/bin/problem-00041.rs) | 7652413      |
+| 42   | [Coded Triangle Numbers](https://projecteuler.net/problem=42) | [problem-00042.rs](euler-rust/src/bin/problem-00042.rs) | 162          |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |
