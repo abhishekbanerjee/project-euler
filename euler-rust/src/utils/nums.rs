@@ -45,3 +45,20 @@ pub fn gcd<T: Rem<Output = T> + PartialOrd + Zero + Copy>(a: T, b: T) -> T {
     }
     gcd(b % a, a)
 }
+
+// n is the m-th triangular number if m(m+1)/2 = n. Using the
+// quadratic formula, this means that m = (sqrt(8n + 1) - 1)/2. So n
+// is triangular if and only if 8n+1 is a perfect square.
+pub fn is_triangular(n: u64) -> bool {
+    let s = n * 8 + 1;
+    let r = (s as f64).sqrt().floor() as u64;
+    s == r * r
+}
+
+// n is the m-th pentagonal number if m(3m-1)/2 = n. Using the
+// quadratic formula, this means that m = (sqrt(1+24n) + 1)/6.
+pub fn is_pentagonal(n: u64) -> bool {
+    let s = 1 + 24 * n;
+    let r = (s as f64).sqrt().floor() as u64;
+    r * r == s && (r + 1) % 6 == 0
+}
