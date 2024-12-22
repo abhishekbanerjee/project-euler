@@ -58,4 +58,5 @@ $ cargo run --bin problem-00001
 | 43   | [Sub-string Divisibility](https://projecteuler.net/problem=43) | [problem-00043.rs](euler-rust/src/bin/problem-00043.rs) | 16695334890  |
 | 44   | [Pentagon Numbers](https://projecteuler.net/problem=44)      | [problem-00044.rs](euler-rust/src/bin/problem-00044.rs) | 5482660      |
 | 45   | [Triangular, Pentagonal, and Hexagonal](https://projecteuler.net/problem=45) | [problem-00045.rs](euler-rust/src/bin/problem-00045.rs) | 1533776805   |
+| 46   | [Goldbach's Other Conjecture](https://projecteuler.net/problem=46) | [problem-00046.rs](euler-rust/src/bin/problem-00046.rs) | 5777         |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |

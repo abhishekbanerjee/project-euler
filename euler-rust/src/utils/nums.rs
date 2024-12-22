@@ -1,3 +1,5 @@
+use num_traits::FromPrimitive;
+use num_traits::ToPrimitive;
 use num_traits::Zero;
 use std::ops::Div;
 use std::ops::Mul;
@@ -46,13 +48,17 @@ pub fn gcd<T: Rem<Output = T> + PartialOrd + Zero + Copy>(a: T, b: T) -> T {
     gcd(b % a, a)
 }
 
+pub fn is_perfect_square<T: Copy + FromPrimitive + Mul<Output = T> + PartialEq + ToPrimitive>(n: T) -> bool {
+    let r = T::from_f64(n.to_f64().unwrap().sqrt().floor()).unwrap();
+    n == r*r
+}
+
 // n is the m-th triangular number if m(m+1)/2 = n. Using the
 // quadratic formula, this means that m = (sqrt(8n + 1) - 1)/2. So n
 // is triangular if and only if 8n+1 is a perfect square.
 pub fn is_triangular(n: u64) -> bool {
     let s = n * 8 + 1;
-    let r = (s as f64).sqrt().floor() as u64;
-    s == r * r
+    is_perfect_square(s)
 }
 
 // n is the m-th pentagonal number if m(3m-1)/2 = n. Using the
