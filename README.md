@@ -61,4 +61,5 @@ $ cargo run --bin problem-00001
 | 46   | [Goldbach's Other Conjecture](https://projecteuler.net/problem=46) | [problem-00046.rs](euler-rust/src/bin/problem-00046.rs) | 5777         |
 | 47   | [Distinct Primes Factors](https://projecteuler.net/problem=47) | [problem-00047.rs](euler-rust/src/bin/problem-00047.rs) | 134043       |
 | 48   | [Self Powers](https://projecteuler.net/problem=48)           | [problem-00048.rs](euler-rust/src/bin/problem-00048.rs) | 9110846700   |
+| 49   | [Prime Permutations](https://projecteuler.net/problem=49)    | [problem-00049.rs](euler-rust/src/bin/problem-00049.rs) | 296962999629 |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |
