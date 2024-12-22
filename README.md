@@ -59,4 +59,5 @@ $ cargo run --bin problem-00001
 | 44   | [Pentagon Numbers](https://projecteuler.net/problem=44)      | [problem-00044.rs](euler-rust/src/bin/problem-00044.rs) | 5482660      |
 | 45   | [Triangular, Pentagonal, and Hexagonal](https://projecteuler.net/problem=45) | [problem-00045.rs](euler-rust/src/bin/problem-00045.rs) | 1533776805   |
 | 46   | [Goldbach's Other Conjecture](https://projecteuler.net/problem=46) | [problem-00046.rs](euler-rust/src/bin/problem-00046.rs) | 5777         |
+| 47   | [Distinct Primes Factors](https://projecteuler.net/problem=47) | [problem-00047.rs](euler-rust/src/bin/problem-00047.rs) | 134043       |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |

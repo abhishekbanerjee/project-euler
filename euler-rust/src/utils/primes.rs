@@ -1,3 +1,5 @@
+use std::collections::HashSet;
+
 const DEFAULT_SIZE : usize = 100_000;
 
 pub struct Primes {
@@ -43,6 +45,25 @@ impl Primes {
 	};
 	self.primes[..idx].to_vec()
     }
+
+    pub fn prime_factors(&mut self, mut n: usize) -> HashSet<usize> {
+	let mut factors: HashSet<usize> = HashSet::new();
+	if self.is_prime(n) {
+	    factors.insert(n);
+	} else {
+	    let mut prime_idx = 0usize;
+	    while n != 1 {
+		let prime = self.prime_number(prime_idx);
+		while n % prime == 0 {
+		    factors.insert(prime);
+		    n /= prime;
+		}
+		prime_idx += 1;
+	    }
+	}
+	factors
+    }
+
 
     fn set_up(sieve: &mut [bool], primes: &mut Vec<usize>, start: usize) {
 	for current_factor in start..sieve.len() {
