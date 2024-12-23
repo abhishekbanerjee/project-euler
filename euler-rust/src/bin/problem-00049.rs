@@ -22,7 +22,7 @@ fn prime_permutations_sequence(exception: BigUint) -> BigUint {
     loop {
 	let prime = primes.prime_number(primes_idx);
 	if prime >= u_limit { break; }
-	let canonical = canonicalize(prime);
+	let canonical = parse::canonicalize(prime);
 	if canonical >= l_limit {
 	    if !canonical_primes.contains_key(&canonical) {
 		canonical_primes.insert(canonical, Vec::new());
@@ -64,13 +64,4 @@ fn prime_permutations_sequence(exception: BigUint) -> BigUint {
     // The question guarantees that we will have another sequence, so
     // we will not reach here.
     panic!("Impossible!");
-}
-
-// Canonicalize a number: the canonical form of a number has the same
-// digits in sorted order. This means that two numbers which are
-// permutations of each other have the same canonicalized form.
-fn canonicalize(n: usize) -> usize {
-    let mut digits: Vec<usize> = parse::split_number_to_digits(n).clone();
-    digits.sort();
-    parse::parse_slice_as_number(digits.as_slice())
 }

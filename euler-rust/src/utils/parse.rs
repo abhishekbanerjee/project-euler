@@ -48,3 +48,12 @@ pub fn nth_digit<T: Display + FromStr<Err: Debug> + ToString>(number: T, idx: us
 	.parse::<T>()
 	.expect(format!("{} does not have a {}-th digit!", number, idx).as_str())
 }
+
+// Canonicalize a number: the canonical form of a number has the same
+// digits in sorted order. This means that two numbers which are
+// permutations of each other have the same canonicalized form.
+pub fn canonicalize<T: FromStr<Err : Debug> + ToString>(n: T) -> T {
+    let mut digits: Vec<u8> = split_number_to_digits(n).clone();
+    digits.sort();
+    parse_slice_as_number(digits.as_slice())
+}
