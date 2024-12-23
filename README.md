@@ -65,4 +65,5 @@ $ cargo run --bin problem-00001
 | 50   | [Consecutive Prime Sum](https://projecteuler.net/problem=50) | [problem-00050.rs](euler-rust/src/bin/problem-00050.rs) | 997651       |
 | 51   | [Prime Digit Replacements](https://projecteuler.net/problem=50) | [problem-00051.rs](euler-rust/src/bin/problem-00051.rs) | 121313       |
 | 52   | [Permuted Multiples](https://projecteuler.net/problem=52)    | [problem-00052.rs](euler-rust/src/bin/problem-00052.rs) | 142857       |
+| 53   | [Combinatoric Selections](https://projecteuler.net/problem=53) | [problem-00053.rs](euler-rust/src/bin/problem-00053.rs) | 4075         |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |
