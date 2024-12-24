@@ -67,4 +67,5 @@ $ cargo run --bin problem-00001
 | 52   | [Permuted Multiples](https://projecteuler.net/problem=52)    | [problem-00052.rs](euler-rust/src/bin/problem-00052.rs) | 142857       |
 | 53   | [Combinatoric Selections](https://projecteuler.net/problem=53) | [problem-00053.rs](euler-rust/src/bin/problem-00053.rs) | 4075         |
 | 54   | [Poker Hands](https://projecteuler.net/problem=54)           | [problem-00054.rs](euler-rust/src/bin/problem-00054.rs) | 376          |
+| 55   | [Lychrel Numbers](https://projecteuler.net/problem=55)       | [problem-00055.rs](euler-rust/src/bin/problem-00055.rs) | 249          |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |

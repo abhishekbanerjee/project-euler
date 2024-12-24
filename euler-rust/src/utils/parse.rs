@@ -35,6 +35,12 @@ pub fn split_number_to_digits<T: ToString, U: FromStr<Err: Debug>>(n: T) -> Vec<
 	.collect()
 }
 
+pub fn reverse_number<T: FromStr<Err: Debug> + ToString>(n : T) -> T {
+    let mut digits: Vec<u8> = split_number_to_digits(n);
+    digits.reverse();
+    parse_slice_as_number(digits.as_slice())
+}
+
 // Extracts the first digit of the given number.
 pub fn first_digit<T: Display + FromStr<Err: Debug> + ToString>(n: T) -> T {
     nth_digit(n, 0usize)
