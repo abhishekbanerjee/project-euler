@@ -20,7 +20,7 @@ fn spiral_primes_ratio(threshold: f32) -> usize {
 	// Four diagonal elements in the current spiral.
 	for _ in 0..4 {
 	    current += step;
-	    if primes.is_prime(current) {
+	    if primes.is_prime_fast(current) {
 		prime_count += 1;
 	    }
 	}

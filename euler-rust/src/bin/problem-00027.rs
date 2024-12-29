@@ -29,7 +29,7 @@ fn primes_count(prime_checker: &mut Primes, a: i64, b: i64) -> usize {
     let mut n = 0i64;
     loop {
 	let candidate = n*n + a*n + b;
-	if prime_checker.is_prime(candidate.unsigned_abs() as usize) {
+	if prime_checker.is_prime_fast(candidate.unsigned_abs() as usize) {
 	    n += 1;
 	} else {
 	    break;

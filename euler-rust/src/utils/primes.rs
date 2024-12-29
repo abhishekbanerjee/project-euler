@@ -28,11 +28,31 @@ impl Primes {
 	self.primes[index].clone()
     }
 
+    // Grows the sieve to the given candidate first. If the sieve is
+    // not already that big, consider using the is_prime_fast method
+    // instead, which might not grow the sieve that much.
     pub fn is_prime(&mut self, prime_candidate: usize) -> bool {
 	while self.sieve.len() <= prime_candidate {
 	    self.grow();
 	}
 	self.sieve[prime_candidate].clone()
+    }
+
+    // Checks all primes till the square root of the number to find a
+    // divisor. Use this when the numbers can grow to much bigger than
+    // the sieve.
+    pub fn is_prime_fast(&mut self, prime_candidate: usize) -> bool {
+	if self.sieve.len() > prime_candidate {
+	    return self.is_prime(prime_candidate)
+	}
+	if prime_candidate % 2 == 0 { return false }
+	let mut idx = 1usize;
+	loop {
+	    let prime = self.prime_number(idx);
+	    if prime_candidate % prime == 0 { return false }
+	    if prime * prime > prime_candidate { return true }
+	    idx += 1;
+	}
     }
 
     pub fn all_primes_below(&mut self, limit: usize) -> Vec<usize> {
