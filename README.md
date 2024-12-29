@@ -1,6 +1,8 @@
 # Project Euler
 Solving [Project Euler](https://projecteuler.net) problems, one commit at a time.
 
+[![Project Euler](https://projecteuler.net/profile/abhi_banerjee.png)](https://projecteuler.net)
+
 ## Run the Rust Code
 
 ```shell
