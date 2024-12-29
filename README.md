@@ -68,4 +68,5 @@ $ cargo run --bin problem-00001
 | 53   | [Combinatoric Selections](https://projecteuler.net/problem=53) | [problem-00053.rs](euler-rust/src/bin/problem-00053.rs) | 4075         |
 | 54   | [Poker Hands](https://projecteuler.net/problem=54)           | [problem-00054.rs](euler-rust/src/bin/problem-00054.rs) | 376          |
 | 55   | [Lychrel Numbers](https://projecteuler.net/problem=55)       | [problem-00055.rs](euler-rust/src/bin/problem-00055.rs) | 249          |
+| 56   | [Powerful Digit Sum](https://projecteuler.net/problem=56)    | [problem-00056.rs](euler-rust/src/bin/problem-00056.rs) | 972          |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |
