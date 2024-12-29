@@ -73,4 +73,5 @@ $ cargo run --bin problem-00001
 | 56   | [Powerful Digit Sum](https://projecteuler.net/problem=56)    | [problem-00056.rs](euler-rust/src/bin/problem-00056.rs) | 972          |
 | 57   | [Square Root Convergents](https://projecteuler.net/problem=57) | [problem-00057.rs](euler-rust/src/bin/problem-00057.rs) | 153          |
 | 58   | [Spiral Primes](https://projecteuler.net/problem=58)         | [problem-00058.rs](euler-rust/src/bin/problem-00058.rs) | 26241        |
+| 59   | [XOR Decryption](https://projecteuler.net/problem=59)        | [problem-00059.rs](euler-rust/src/bin/problem-00059.rs) | 129448       |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |
