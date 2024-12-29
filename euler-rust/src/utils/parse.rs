@@ -55,6 +55,10 @@ pub fn nth_digit<T: Display + FromStr<Err: Debug> + ToString>(number: T, idx: us
 	.expect(format!("{} does not have a {}-th digit!", number, idx).as_str())
 }
 
+pub fn count_digits<T: ToString>(number: T) -> usize {
+    number.to_string().chars().count()
+}
+
 // Canonicalize a number: the canonical form of a number has the same
 // digits in sorted order. This means that two numbers which are
 // permutations of each other have the same canonicalized form.
