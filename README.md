@@ -78,4 +78,5 @@ $ cargo run --bin problem-00001
 | 61   | [Cyclical Figurate Numbers](https://projecteuler.net/problem=61) | [problem-00061.rs](euler-rust/src/bin/problem-00061.rs) | 28684        |
 | 62   | [Cubic Permutations](https://projecteuler.net/problem=62)    | [problem-00062.rs](euler-rust/src/bin/problem-00062.rs) | 127035954683 |
 | 63   | [Powerful Digit Counts](https://projecteuler.net/problem=63) | [problem-00063.rs](euler-rust/src/bin/problem-00063.rs) | 49           |
+| 64   | [Odd Period Square Roots](https://projecteuler.net/problem=64) | [problem-00064.rs](euler-rust/src/bin/problem-00064.rs) | 1322         |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |
