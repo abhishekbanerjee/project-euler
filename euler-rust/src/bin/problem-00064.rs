@@ -21,8 +21,9 @@ fn is_odd_period_square_root(n: u32) -> bool {
     if r * r == n { return false }
     // Initialize our first pair of numbers to track.
     let mut pair: (u32, u32) = (1, r);
-    let mut period = 1usize;
+    let mut period = 0usize;
     loop {
+	period += 1;
 	let (old_x, old_y) = pair;
 	let new_x = (n - old_y*old_y) / old_x;
 	let a = (r + old_y) / new_x;
@@ -31,7 +32,6 @@ fn is_odd_period_square_root(n: u32) -> bool {
 	// ones.
 	if new_x == 1 && new_y == r { break; }
 	pair = (new_x, new_y);
-	period += 1;
     }
     period % 2 == 1
 }
