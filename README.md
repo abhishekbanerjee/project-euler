@@ -76,4 +76,5 @@ $ cargo run --bin problem-00001
 | 59   | [XOR Decryption](https://projecteuler.net/problem=59)        | [problem-00059.rs](euler-rust/src/bin/problem-00059.rs) | 129448       |
 | 60   | [Prime Pair Sets](https://projecteuler.net/problem=60)       | [problem-00060.rs](euler-rust/src/bin/problem-00060.rs) | 26033        |
 | 61   | [Cyclical Figurate Numbers](https://projecteuler.net/problem=61) | [problem-00061.rs](euler-rust/src/bin/problem-00061.rs) | 28684        |
+| 62   | [Cubic Permutations](https://projecteuler.net/problem=62)    | [problem-00062.rs](euler-rust/src/bin/problem-00062.rs) | 127035954683 |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |
