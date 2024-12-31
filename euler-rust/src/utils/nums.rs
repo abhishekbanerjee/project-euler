@@ -1,33 +1,31 @@
 use num_traits::FromPrimitive;
+use num_traits::One;
 use num_traits::ToPrimitive;
 use num_traits::Zero;
+use std::iter::Sum;
 use std::ops::Div;
 use std::ops::Mul;
 use std::ops::Rem;
 
-// Sums up all the divisors of a number except for itself.
-pub fn divisors_sum(n: u32) -> u32 {
-    if n == 1 { return 0; }
-    // The square root is the largest possible non-identity divisor of
-    // a number.
-    let root = (n as f64).sqrt().ceil() as u32;
-    // Start the count at 1, because 1 always divides the
-    // number.
-    let mut divisors_sum = 1u32;
-    for d in 2..root {
-	// Each number d evenly dividing n gets two distinct divisors:
-	// d and n/d. Since d < sqrt(n) by the loop condition,
-	// therefore n/d > sqrt(n) and we therefore would not
-	// encounter n/d in this loop.
-	if n % d == 0 {
-	    divisors_sum += d + n/d;
+// Returns all divisors of a number except for 1 and itself.
+pub fn divisors<T: Copy + Div<Output = T> + FromPrimitive + Mul<Output = T> + One + PartialEq + PartialOrd + Rem<Output = T> + ToPrimitive + Zero>(n: T) -> Vec<T> {
+    let mut divs: Vec<T> = Vec::new();
+    let root = int_square_root(n);
+    let mut d = T::one();
+    while d <= root {
+	if (n % d).is_zero() && !d.is_one() {
+	    divs.push(d);
+	    if !(d == root && n == root * root) { divs.push(n/d); }
 	}
+	d = d + T::one();
     }
-    // If n is an even square, the square root counts only once.
-    if n == root*root {
-	divisors_sum += root;
-    }
-    divisors_sum
+    divs
+}
+
+// Sums up all the divisors of a number except for itself (and
+// including 1, unless the number is 1).
+pub fn divisors_sum<T: Copy + Div<Output = T> + FromPrimitive + Mul<Output = T> + One + PartialEq + PartialOrd + Rem<Output = T> + Sum + ToPrimitive + Zero>(n: T) -> T {
+    if n.is_one() { T::zero() } else { T::one() + divisors(n).into_iter().sum() }
 }
 
 // We use the formula: LCM(a, b) = a * b / GCD(a, b), where GCD is the
