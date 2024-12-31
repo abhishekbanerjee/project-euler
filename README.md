@@ -83,3 +83,4 @@ $ cargo run --bin problem-00001
 | 66   | [Diophantine Equation](https://projecteuler.net/problem=66)  | [problem-00066.rs](euler-rust/src/bin/problem-00066.rs) | 661              |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273             |
 | 68   | [Magic 5-gon Ring](https://projecteuler.net/problem=68)      | [problem-00068.rs](euler-rust/src/bin/problem-00068.rs) | 6531031914842725 |
+| 69   | [Totient Maximum](https://projecteuler.net/problem=69)       | [problem-00069.rs](euler-rust/src/bin/problem-00069.rs) | 510510           |
