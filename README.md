@@ -1,7 +1,7 @@
 # Project Euler
 Solving [Project Euler](https://projecteuler.net) problems, one commit at a time.
 
-[![Project Euler](https://projecteuler.net/profile/abhi_banerjee.png)](https://projecteuler.net)
+![Project Euler](https://projecteuler.net/profile/abhi_banerjee.png)
 
 ## Run the Rust Code
 
@@ -85,3 +85,4 @@ $ cargo run --bin problem-00001
 | 68   | [Magic 5-gon Ring](https://projecteuler.net/problem=68)      | [problem-00068.rs](euler-rust/src/bin/problem-00068.rs) | 6531031914842725 |
 | 69   | [Totient Maximum](https://projecteuler.net/problem=69)       | [problem-00069.rs](euler-rust/src/bin/problem-00069.rs) | 510510           |
 | 70   | [Totient Permutation](https://projecteuler.net/problem=70)   | [problem-00070.rs](euler-rust/src/bin/problem-00070.rs) | 8319823          |
+| 71   | [Ordered Fractions](https://projecteuler.net/problem=71)     | [problem-00071.rs](euler-rust/src/bin/problem-00071.rs) | 428570           |
