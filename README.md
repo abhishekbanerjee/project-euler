@@ -80,4 +80,5 @@ $ cargo run --bin problem-00001
 | 63   | [Powerful Digit Counts](https://projecteuler.net/problem=63) | [problem-00063.rs](euler-rust/src/bin/problem-00063.rs) | 49           |
 | 64   | [Odd Period Square Roots](https://projecteuler.net/problem=64) | [problem-00064.rs](euler-rust/src/bin/problem-00064.rs) | 1322         |
 | 65   | [Convergents of *e*](https://projecteuler.net/problem=65)    | [problem-00065.rs](euler-rust/src/bin/problem-00065.rs) | 272          |
+| 66   | [Diophantine Equation](https://projecteuler.net/problem=66)  | [problem-00066.rs](euler-rust/src/bin/problem-00066.rs) | 661          |
 | 67   | [Maximum Path Sum II](https://projecteuler.net/problem=67)   | [problem-00067.rs](euler-rust/src/bin/problem-00067.rs) | 7273         |

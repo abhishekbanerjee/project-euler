@@ -48,8 +48,12 @@ pub fn gcd<T: Rem<Output = T> + PartialOrd + Zero + Copy>(a: T, b: T) -> T {
     gcd(b % a, a)
 }
 
+pub fn int_square_root<T: Copy + FromPrimitive + Mul<Output = T> + PartialEq + ToPrimitive>(n: T) -> T {
+    T::from_f64(n.to_f64().unwrap().sqrt().floor()).unwrap()
+}
+
 pub fn is_perfect_square<T: Copy + FromPrimitive + Mul<Output = T> + PartialEq + ToPrimitive>(n: T) -> bool {
-    let r = T::from_f64(n.to_f64().unwrap().sqrt().floor()).unwrap();
+    let r = int_square_root(n);
     n == r*r
 }
 

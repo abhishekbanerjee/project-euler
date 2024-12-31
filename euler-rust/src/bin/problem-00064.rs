@@ -1,3 +1,5 @@
+use euler_rust::utils::nums;
+
 fn main() {
     let count = odd_period_square_root(10_000);
     println!("{}", count);
@@ -14,8 +16,7 @@ fn odd_period_square_root(limit: u32) -> u32 {
 // these (x, y) pairs, not keeping track of the whole parts. When we
 // encounter the first pair again, we have completed our cycle.
 fn is_odd_period_square_root(n: u32) -> bool {
-    // Integer square root of the number.
-    let r = (n as f32).sqrt().floor() as u32;
+    let r = nums::int_square_root(n);
     // If the number is a perfect square, it is not periodic at all,
     // and therefore also not odd periodic.
     if r * r == n { return false }

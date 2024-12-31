@@ -1,3 +1,5 @@
+use euler_rust::utils::nums;
+
 fn main() {
     let special = special_pythagorean_triplet(1_000);
     println!("{}", special);
@@ -26,7 +28,7 @@ fn special_pythagorean_triplet(n: u32) -> u64 {
 }
 
 fn root(n: u32) -> Option<u32> {
-    let r = (n as f64).sqrt().floor() as u32;
+    let r = nums::int_square_root(n);
     if r*r == n {
 	Some(r)
     } else {

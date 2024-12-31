@@ -1,3 +1,5 @@
+use euler_rust::utils::nums;
+
 fn main() {
     let num = triangular_number_with_divisors(500);
     println!("{}", num);
@@ -22,7 +24,7 @@ fn triangular_number_with_divisors(d: u32) -> u64 {
 fn divisors_count(n: u64) -> u32 {
     // The square root is the largest possible non-identity divisor of
     // a number.
-    let root = (n as f64).sqrt().floor() as u64;
+    let root = nums::int_square_root(n);
     // Start the count at 2, for 1 and the number itself. [This
     // assumes that this function is not called for 1.]
     let mut divisors_count = 2u32;

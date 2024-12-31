@@ -1,3 +1,4 @@
+use euler_rust::utils::nums;
 use euler_rust::utils::primes;
 
 fn main() {
@@ -9,7 +10,7 @@ fn main() {
 fn largest_prime_factor(n: u64) -> u64 {
     // The square root of a number is the largest non-identity factor
     // possible, so we only need to check up until there.
-    let root = (n as f64).sqrt().floor() as usize;
+    let root = nums::int_square_root(n) as usize;
     let mut largest = n;
     let mut primes = primes::Primes::up_to(root+1);
     let mut prime_idx = 0usize;
