@@ -90,3 +90,4 @@ $ cargo run --bin problem-00001
 | 73   | [Counting Fractions in a Range](https://projecteuler.net/problem=73) | [problem-00073.rs](euler-rust/src/bin/problem-00073.rs) | 7295372          |
 | 74   | [Digit Factorial Chains](https://projecteuler.net/problem=74) | [problem-00074.rs](euler-rust/src/bin/problem-00074.rs) | 402              |
 | 75   | [Singular Integer Right Triangles](https://projecteuler.net/problem=75) | [problem-00075.rs](euler-rust/src/bin/problem-00075.rs) | 161667           |
+| 76   | [Counting Summations](https://projecteuler.net/problem=76)   | [problem-00076.rs](euler-rust/src/bin/problem-00076.rs) | 190569291        |
