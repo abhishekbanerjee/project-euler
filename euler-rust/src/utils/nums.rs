@@ -34,16 +34,15 @@ pub fn lcm<T: Div<Output = T> + Mul<Output = T> + Rem<Output = T> + PartialOrd +
     return a*b/gcd(a,b);
 }
 
-// We use the resursive remainder method to find GCD.
-// TODO: make this iterative.
 pub fn gcd<T: Rem<Output = T> + PartialOrd + Zero + Copy>(a: T, b: T) -> T {
-    if a > b {
-	return gcd(b, a)
+    let mut m = if a > b { a } else { b };
+    let mut n = if a > b { b } else { a };
+    while !n.is_zero() {
+	let temp = m % n;
+	m = n;
+	n = temp;
     }
-    if a == T::zero() {
-	return b
-    }
-    gcd(b % a, a)
+    m
 }
 
 pub fn int_square_root<T: Copy + FromPrimitive + Mul<Output = T> + PartialEq + ToPrimitive>(n: T) -> T {
