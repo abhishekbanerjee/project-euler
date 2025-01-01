@@ -88,3 +88,4 @@ $ cargo run --bin problem-00001
 | 71   | [Ordered Fractions](https://projecteuler.net/problem=71)     | [problem-00071.rs](euler-rust/src/bin/problem-00071.rs) | 428570           |
 | 72   | [Counting Fractions](https://projecteuler.net/problem=72)    | [problem-00072.rs](euler-rust/src/bin/problem-00072.rs) | 303963552391     |
 | 73   | [Counting Fractions in a Range](https://projecteuler.net/problem=73) | [problem-00073.rs](euler-rust/src/bin/problem-00073.rs) | 7295372          |
+| 74   | [Digit Factorial Chains](https://projecteuler.net/problem=74) | [problem-00074.rs](euler-rust/src/bin/problem-00074.rs) | 402              |
