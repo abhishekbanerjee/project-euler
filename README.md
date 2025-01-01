@@ -86,3 +86,4 @@ $ cargo run --bin problem-00001
 | 69   | [Totient Maximum](https://projecteuler.net/problem=69)       | [problem-00069.rs](euler-rust/src/bin/problem-00069.rs) | 510510           |
 | 70   | [Totient Permutation](https://projecteuler.net/problem=70)   | [problem-00070.rs](euler-rust/src/bin/problem-00070.rs) | 8319823          |
 | 71   | [Ordered Fractions](https://projecteuler.net/problem=71)     | [problem-00071.rs](euler-rust/src/bin/problem-00071.rs) | 428570           |
+| 72   | [Counting Fractions](https://projecteuler.net/problem=72)    | [problem-00072.rs](euler-rust/src/bin/problem-00072.rs) | 303963552391     |
