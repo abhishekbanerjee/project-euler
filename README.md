@@ -92,3 +92,4 @@ $ cargo run --bin problem-00001
 | 75   | [Singular Integer Right Triangles](https://projecteuler.net/problem=75) | [problem-00075.rs](euler-rust/src/bin/problem-00075.rs) | 161667           |
 | 76   | [Counting Summations](https://projecteuler.net/problem=76)   | [problem-00076.rs](euler-rust/src/bin/problem-00076.rs) | 190569291        |
 | 77   | [Prime Summations](https://projecteuler.net/problem=77)      | [problem-00077.rs](euler-rust/src/bin/problem-00077.rs) | 71               |
+| 78   | [Coin Partitions](https://projecteuler.net/problem=78)       | [problem-00078.rs](euler-rust/src/bin/problem-00078.rs) | 55374            |
