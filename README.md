@@ -95,3 +95,4 @@ $ cargo run --bin problem-00001
 | 78   | [Coin Partitions](https://projecteuler.net/problem=78)       | [problem-00078.rs](euler-rust/src/bin/problem-00078.rs) | 55374            |
 | 79   | [Passcode Derivation](https://projecteuler.net/problem=79)   | [problem-00079.rs](euler-rust/src/bin/problem-00079.rs) | 73162890         |
 | 80   | [Square Root Digital Expansion](https://projecteuler.net/problem=80) | [problem-00080.rs](euler-rust/src/bin/problem-00080.rs) | 40886            |
+| 81   | [Path Sum: Two Ways](https://projecteuler.net/problem=81)    | [problem-00081.rs](euler-rust/src/bin/problem-00081.rs) | 427337           |

@@ -17,7 +17,7 @@ fn max_path_sum_file(file_name: &str) -> u32 {
 //
 // This is the exact same method that we used for Problem 18.
 fn max_path_sum(grid_str: &str) -> u32 {
-    let mut grid = parse::parse_grid(grid_str);
+    let mut grid = parse::parse_grid(grid_str, " ");
     for i in (0..(grid.len()-1)).rev() {
 	for j in 0..grid[i].len() {
 	    grid[i][j] += cmp::max(grid[i+1][j], grid[i+1][j+1]);

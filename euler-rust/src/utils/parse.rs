@@ -2,13 +2,12 @@ use std::fmt::Debug;
 use std::fmt::Display;
 use std::str::FromStr;
 
-// Parse a multiline string of space separated integers into a 2-D
-// vector.
-pub fn parse_grid(grid_str: &str) -> Vec<Vec<u32>> {
+// Parse a multiline string of integers into a 2-D vector.
+pub fn parse_grid(grid_str: &str, separator: &str) -> Vec<Vec<u32>> {
     let mut grid = Vec::new();
     for line in grid_str.lines() {
 	let mut row = Vec::new();
-	for number in line.split_whitespace() {
+	for number in line.split(separator) {
 	    row.push(number.parse::<u32>().unwrap());
 	}
 	grid.push(row);
