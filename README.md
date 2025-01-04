@@ -97,3 +97,4 @@ $ cargo run --bin problem-00001
 | 80   | [Square Root Digital Expansion](https://projecteuler.net/problem=80) | [problem-00080.rs](euler-rust/src/bin/problem-00080.rs) | 40886            |
 | 81   | [Path Sum: Two Ways](https://projecteuler.net/problem=81)    | [problem-00081.rs](euler-rust/src/bin/problem-00081.rs) | 427337           |
 | 82   | [Path Sum: Three Ways](https://projecteuler.net/problem=82)  | [problem-00082.rs](euler-rust/src/bin/problem-00082.rs) | 260324           |
+| 83   | [Path Sum: Four Ways](https://projecteuler.net/problem=83)   | [problem-00083.rs](euler-rust/src/bin/problem-00083.rs) | 425185           |
