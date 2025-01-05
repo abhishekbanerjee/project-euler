@@ -100,3 +100,4 @@ $ cargo run --bin problem-00001
 | 83   | [Path Sum: Four Ways](https://projecteuler.net/problem=83)   | [problem-00083.rs](euler-rust/src/bin/problem-00083.rs) | 425185           |
 | 84   | [Monopoly Odds](https://projecteuler.net/problem=84)         | [problem-00084.rs](euler-rust/src/bin/problem-00084.rs) | 101524           |
 | 85   | [Counting Rectangles](https://projecteuler.net/problem=85)   | [problem-00085.rs](euler-rust/src/bin/problem-00085.rs) | 2772             |
+| 86   | [Cuboid Route](https://projecteuler.net/problem=86)          | [problem-00086.rs](euler-rust/src/bin/problem-00086.rs) | 1818             |
