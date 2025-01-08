@@ -102,3 +102,4 @@ $ cargo run --bin problem-00001
 | 85   | [Counting Rectangles](https://projecteuler.net/problem=85)   | [problem-00085.rs](euler-rust/src/bin/problem-00085.rs) | 2772             |
 | 86   | [Cuboid Route](https://projecteuler.net/problem=86)          | [problem-00086.rs](euler-rust/src/bin/problem-00086.rs) | 1818             |
 | 87   | [Prime Power Triples](https://projecteuler.net/problem=87)   | [problem-00087.rs](euler-rust/src/bin/problem-00087.rs) | 1097343          |
+| 88   | [Product-sum Numbers](https://projecteuler.net/problem=88)   | [problem-00087.rs](euler-rust/src/bin/problem-00087.rs) | 7587457          |
