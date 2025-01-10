@@ -105,3 +105,4 @@ $ cargo run --bin problem-00001
 | 88   | [Product-sum Numbers](https://projecteuler.net/problem=88)   | [problem-00088.rs](euler-rust/src/bin/problem-00088.rs) | 7587457          |
 | 89   | [Roman Numerals](https://projecteuler.net/problem=89)        | [problem-00089.rs](euler-rust/src/bin/problem-00089.rs) | 743              |
 | 90   | [Cube Digit Pairs](https://projecteuler.net/problem=90)      | [problem-00090.rs](euler-rust/src/bin/problem-00090.rs) | 1217             |
+| 91   | [Right Triangles with Integer Coordinates](https://projecteuler.net/problem=91) | [problem-00091.rs](euler-rust/src/bin/problem-00091.rs) | 14234            |
