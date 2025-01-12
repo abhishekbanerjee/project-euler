@@ -110,3 +110,4 @@ $ cargo run --bin problem-00001
 | 93   | [Arithmetic Expressions](https://projecteuler.net/problem=93) | [problem-00093.rs](euler-rust/src/bin/problem-00093.rs) | 1258             |
 | 94   | [Almost Equilateral Triangles](https://projecteuler.net/problem=94) | [problem-00094.rs](euler-rust/src/bin/problem-00094.rs) | 518408346        |
 | 95   | [Amicable Chains](https://projecteuler.net/problem=95)       | [problem-00095.rs](euler-rust/src/bin/problem-00095.rs) | 14316            |
+| 96   | [Su Doku](https://projecteuler.net/problem=96)               | [problem-00096.rs](euler-rust/src/bin/problem-00096.rs) | 24702            |
