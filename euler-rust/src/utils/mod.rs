@@ -1,3 +1,4 @@
+pub mod combinations;
 pub mod files;
 pub mod nums;
 pub mod parse;

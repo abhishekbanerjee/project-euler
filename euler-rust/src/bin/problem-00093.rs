@@ -1,3 +1,4 @@
+use euler_rust::utils::combinations;
 use euler_rust::utils::parse;
 use num_rational::Ratio;
 use num_traits::identities::Zero;
@@ -15,7 +16,7 @@ fn longest_arithmetic_series(num_digits: usize) -> u32 {
     let mut longest_series = 0u32;
     let mut longest_series_length = 0u32;
     let digits: Vec<u8> = (0u8..=9).collect();
-    for combination in combinations(digits.as_slice(), num_digits).iter() {
+    for combination in combinations::combinations(digits.as_slice(), num_digits).iter() {
 	let series: HashSet<u32> = all_arithmetics(combination.as_slice())
 	    .into_iter()
 	    .filter(|&r| r > Ratio::from_integer(0) && r.is_integer())
@@ -68,23 +69,4 @@ fn ops(a: HashSet<Ratio<i32>>, b: HashSet<Ratio<i32>>) -> HashSet<Ratio<i32>> {
 	}
     }
     results
-}
-
-fn combinations(source: &[u8], length: usize) -> Vec<Vec<u8>> {
-    let mut seed: Vec<u8> = Vec::new();
-    let mut combos: Vec<Vec<u8>> = Vec::new();
-    combinations_recursive(source, length, 0, &mut seed, &mut combos);
-    combos
-}
-
-fn combinations_recursive(source: &[u8], length: usize, idx: usize, current: &mut Vec<u8>, combos: &mut Vec<Vec<u8>>) {
-    if source.len() - idx < length - current.len() { return; }
-    if current.len() == length {
-	combos.push(current.clone());
-	return;
-    }
-    combinations_recursive(source, length, idx+1, current, combos);
-    current.push(source[idx]);
-    combinations_recursive(source, length, idx+1, current, combos);
-    current.pop();
 }
