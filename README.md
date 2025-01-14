@@ -113,3 +113,4 @@ $ cargo run --bin problem-00001
 | 96   | [Su Doku](https://projecteuler.net/problem=96)               | [problem-00096.rs](euler-rust/src/bin/problem-00096.rs) | 24702            |
 | 97   | [Large Non-Mersenne Prime](https://projecteuler.net/problem=97) | [problem-00097.rs](euler-rust/src/bin/problem-00097.rs) | 8739992577       |
 | 98   | [Anagramic Squares](https://projecteuler.net/problem=98)     | [problem-00098.rs](euler-rust/src/bin/problem-00098.rs) | 18769            |
+| 99   | [Largest Exponential](https://projecteuler.net/problem=99)   | [problem-00099.rs](euler-rust/src/bin/problem-00099.rs) | 709              |
