@@ -1,3 +1,5 @@
+use euler_rust::utils::primes::Primes;
+
 fn main() {
     let sum = sum_primes(2_000_000);
     println!("{}", sum);
@@ -5,19 +7,16 @@ fn main() {
 
 // We use the Sieve of Eratosthenes method to find primes, and then
 // sum them up.
-fn sum_primes(n: u32) -> u64 {
-    let mut sum = 0u64;
-    let mut sieve = vec![true; (n+1) as usize];
-    for factor in 2..=n {
-	if !sieve[factor as usize] {
-	    continue;
-	}
-	sum += factor as u64;
-	let mut mark = factor*2;
-	while mark <= n {
-	    sieve[mark as usize] = false;
-	    mark += factor;
-	}
+fn sum_primes(n: usize) -> usize {
+    Primes::up_to(n+1).all_primes_below(n).into_iter().sum()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_sum_primes() {
+	assert_eq!(sum_primes(10), 17);
     }
-    sum
 }

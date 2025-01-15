@@ -19,5 +19,15 @@ fn sum_fibonaccis(n: u64) -> u64 {
 	a = b;
 	b = c;
     }
-    return sum
+    sum
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_sum_fibonaccis() {
+	assert_eq!(sum_fibonaccis(100), 44);
+    }
 }

@@ -12,19 +12,16 @@ fn main() {
 fn special_pythagorean_triplet(n: u32) -> u64 {
     for a in 1..=n {
 	for b in 1..=a {
-	    match root(a*a + b*b) {
-		None => {},
-		Some(c) => {
-		    if a + b + c == n {
-			return (a as u64) * (b as u64) * (c as u64);
-		    }
-		},
+	    if let Some(c) = root(a*a + b*b) {
+		if a + b + c == n {
+		    return (a as u64) * (b as u64) * (c as u64)
+		}
 	    }
 	}
     }
     // The question specifies that we're guaranteed a satisfying
     // triplet, so we will never get here.
-    return 0;
+    panic!("Impossible!");
 }
 
 fn root(n: u32) -> Option<u32> {
@@ -33,5 +30,21 @@ fn root(n: u32) -> Option<u32> {
 	Some(r)
     } else {
 	None
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_special_pythagorean_triplet() {
+	assert_eq!(special_pythagorean_triplet(12), 60);
+    }
+
+    #[test]
+    #[should_panic]
+    fn test_special_pythagorean_triplet_fail() {
+	special_pythagorean_triplet(10);
     }
 }

@@ -26,3 +26,13 @@ fn largest_prime_factor(n: u64) -> u64 {
     }
     largest
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_largest_prime_factor() {
+	assert_eq!(largest_prime_factor(13195), 29);
+    }
+}

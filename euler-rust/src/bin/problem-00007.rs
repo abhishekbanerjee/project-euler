@@ -12,3 +12,13 @@ fn find_prime_number(n: usize) -> usize {
     // The index of the n-th prime number would be n-1.
     primes.prime_number(n-1)
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_find_prime_number() {
+	assert_eq!(find_prime_number(6), 13);
+    }
+}

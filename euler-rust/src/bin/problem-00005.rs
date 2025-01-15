@@ -13,5 +13,15 @@ fn smallest_multiple(n: u64) -> u64 {
     for factor in 1..=n {
 	multiple = nums::lcm(multiple, factor);
     }
-    return multiple;
+    multiple
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_smallest_multiple() {
+	assert_eq!(smallest_multiple(10), 2520);
+    }
 }

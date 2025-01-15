@@ -12,5 +12,15 @@ fn sum_multiples(n: u32) -> u32 {
 	    sum += i;
 	}
     }
-    return sum
+    sum
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_sum_multiples() {
+	assert_eq!(sum_multiples(10), 23);
+    }
 }

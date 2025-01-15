@@ -7,8 +7,8 @@ Solving [Project Euler](https://projecteuler.net) problems, one commit at a time
 
 ```shell
 $ cd euler-rust
-$ cargo build
-$ cargo run --bin problem-00001
+$ cargo run --bin problem-00001 # to find the answer to the problem
+$ cargo test --bin problem-00001 # to run unit tests
 ```
 
 ## Solutions
