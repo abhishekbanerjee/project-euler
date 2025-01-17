@@ -5,7 +5,7 @@ fn main() {
 
 fn longest_collatz_under(n: u32) -> u32 {
     let mut longest = 1u32;
-    let mut longest_length = 0u64;
+    let mut longest_length = 1u64;
     for current in 2..n {
 	let length = collatz_length(current);
 	if length > longest_length {
@@ -21,10 +21,20 @@ fn longest_collatz_under(n: u32) -> u32 {
 // here.
 fn collatz_length(start: u32) -> u64 {
     let mut n = start as u64;
-    let mut length = 0;
+    let mut length = 1;
     while n != 1 {
 	n = if n % 2 == 0 { n/2 } else { 3*n+1 };
 	length += 1;
     }
     length
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_collatz_length() {
+	assert_eq!(collatz_length(13), 10);
+    }
 }

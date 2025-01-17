@@ -22,3 +22,13 @@ fn lattice_paths(n: usize) -> u64 {
     }
     current_row[n]
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_lattice_paths() {
+	assert_eq!(lattice_paths(2), 6);
+    }
+}

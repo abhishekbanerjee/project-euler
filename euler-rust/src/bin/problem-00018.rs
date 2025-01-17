@@ -35,3 +35,18 @@ fn max_path_sum(grid_str: &str) -> u32 {
     grid[0][0]
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_max_path_sum() {
+	let sum = max_path_sum("\
+	    3\n\
+	    7 4\n\
+	    2 4 6\n\
+	    8 5 9 3\n\
+	    ");
+	assert_eq!(sum, 23);
+    }
+}

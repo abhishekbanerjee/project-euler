@@ -22,3 +22,13 @@ fn factorial(n: u32) -> BigUint {
     }
     product
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_sum_factorial_digits() {
+	assert_eq!(sum_factorial_digits(10), 27);
+    }
+}

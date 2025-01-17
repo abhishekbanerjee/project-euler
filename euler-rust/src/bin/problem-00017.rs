@@ -81,3 +81,19 @@ fn tens(n: u32) -> u32 {
 	_ => panic!("Out of range!"),
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_letter_count() {
+	assert_eq!(letter_count(342), 23);
+	assert_eq!(letter_count(115), 20);
+    }
+
+    #[test]
+    fn test_num_letter_counts() {
+	assert_eq!(num_letter_counts(5), 19);
+    }
+}

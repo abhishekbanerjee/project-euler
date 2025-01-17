@@ -14,3 +14,13 @@ fn sum_power_digits(n: u32, exponent: u32) -> u32 {
     }
     sum
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_sum_power_digits() {
+	assert_eq!(sum_power_digits(2, 15), 26);
+    }
+}
