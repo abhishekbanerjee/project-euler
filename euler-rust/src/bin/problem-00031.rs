@@ -17,3 +17,15 @@ fn find_combinations(denominations: &[usize], total: usize) -> usize {
     }
     combinations[total]
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_find_combinations() {
+	// Combinations are: [2,2,2,2,2], [2,2,3,3], [2,2,6], [2,3,5] and [5,5].
+	assert_eq!(find_combinations(&[2, 5, 3, 6], 10), 5);
+    }
+}
+

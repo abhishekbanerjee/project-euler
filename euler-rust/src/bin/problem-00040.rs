@@ -34,3 +34,13 @@ fn champernowne_number(mut index: u32) -> u32 {
 	return parse::nth_digit(target, pos as usize);
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_champernowne_number() {
+	assert_eq!(champernowne_number(12), 1);
+    }
+}
