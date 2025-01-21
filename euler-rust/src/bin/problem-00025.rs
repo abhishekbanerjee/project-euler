@@ -22,3 +22,13 @@ fn fibonacci_term_with_digits(digits: usize) -> u32 {
     }
     return term_number
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_fibonacci_term_with_digits() {
+	assert_eq!(fibonacci_term_with_digits(3), 12);
+    }
+}

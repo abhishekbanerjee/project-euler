@@ -21,3 +21,13 @@ fn sum_spiral_diagonals(n: u32) -> u32 {
     }
     sum
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_sum_spiral_diagonals() {
+	assert_eq!(sum_spiral_diagonals(5), 101);
+    }
+}

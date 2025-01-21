@@ -30,3 +30,14 @@ fn non_abundant_sums(limit: u32) -> u64 {
 fn is_abundant(n: u32) -> bool {
     nums::divisors_sum(n) > n
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_is_abundant() {
+	assert!(is_abundant(12));
+	assert!(!is_abundant(28));
+    }
+}

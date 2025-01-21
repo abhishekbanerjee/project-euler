@@ -51,3 +51,13 @@ fn multiply(factorization: &[u32], multiplicand: u32) -> Vec<u32> {
     }
     factors
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_distinct_powers() {
+	assert_eq!(distinct_powers(5, 5), 15);
+    }
+}

@@ -37,3 +37,15 @@ fn primes_count(prime_checker: &mut Primes, a: i64, b: i64) -> usize {
     }
     n.unsigned_abs() as usize
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_primes_count() {
+	let mut prime_checker = Primes::new();
+	assert_eq!(primes_count(&mut prime_checker, 1, 41), 40);
+	assert_eq!(primes_count(&mut prime_checker, -79, 1601), 80);
+    }
+}

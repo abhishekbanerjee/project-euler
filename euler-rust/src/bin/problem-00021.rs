@@ -21,3 +21,14 @@ fn amicable_numbers_sum(limit: u32) -> u64 {
     }
     amicable_sum
 }
+
+#[cfg(test)]
+mod tests {
+    use euler_rust::utils::nums;
+
+    #[test]
+    fn test_divisors_sum() {
+	assert_eq!(nums::divisors_sum(220), 284);
+	assert_eq!(nums::divisors_sum(284), 220);
+    }
+}

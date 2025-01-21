@@ -32,3 +32,13 @@ fn sum_power_digits(mut n: u32, digit_powers: &[u32]) -> u32 {
     }
     sum
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_sum_powers() {
+	assert_eq!(sum_powers(4), 19316);
+    }
+}

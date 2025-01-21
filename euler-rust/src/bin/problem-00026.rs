@@ -41,3 +41,18 @@ fn reciprocal_cycle_length(n: u32) -> u32 {
 	};
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_reciprocal_cycle_length() {
+	assert_eq!(reciprocal_cycle_length(6), 1);
+    }
+
+    #[test]
+    fn test_longest_reciprocal_cycle() {
+	assert_eq!(longest_reciprocal_cycle(10), 7);
+    }
+}
