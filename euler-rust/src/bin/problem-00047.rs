@@ -34,3 +34,14 @@ fn distinct_prime_factors(consecutive: u8) -> usize {
 	candidate += 1;
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_distinct_prime_factors() {
+	assert_eq!(distinct_prime_factors(2), 14);
+	assert_eq!(distinct_prime_factors(3), 644);
+    }
+}

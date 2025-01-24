@@ -13,3 +13,13 @@ fn self_power_last_ten(limit: u32) -> u64 {
     ((1..=limit).map(|n| BigUint::from(n).pow(n)).sum::<BigUint>()
      % BigUint::from(10u8).pow(10)).to_u64().unwrap()
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_self_power_last_ten() {
+	assert_eq!(self_power_last_ten(10), 405071317);
+    }
+}

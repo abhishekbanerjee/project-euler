@@ -36,3 +36,13 @@ fn consecutive_prime_sum(limit: usize) -> usize {
     }
     largest
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_consecutive_prime_sum() {
+	assert_eq!(consecutive_prime_sum(100), 41);
+    }
+}

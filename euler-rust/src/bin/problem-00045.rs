@@ -23,3 +23,13 @@ fn hexagonal_also_triangular_pentagonal_after(hex_idx: u64) -> u64 {
 	diff += 4;
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_hexagonal_also_triangular_pentagonal_after() {
+	assert_eq!(hexagonal_also_triangular_pentagonal_after(1), 40755);
+    }
+}

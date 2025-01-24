@@ -23,3 +23,16 @@ fn smallest_pentagonal_difference() -> u64 {
 	diff += 3;
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_is_pentagonal() {
+	assert!(nums::is_pentagonal(22));
+	assert!(nums::is_pentagonal(70));
+	assert!(nums::is_pentagonal(22 + 70));
+	assert!(!nums::is_pentagonal(70 - 22));
+    }
+}

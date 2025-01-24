@@ -65,3 +65,13 @@ fn prime_permutations_sequence(exception: BigUint) -> BigUint {
     // we will not reach here.
     panic!("Impossible!");
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_prime_permutations_sequence() {
+	assert_eq!(prime_permutations_sequence(parse::parse_slice_as_number(&[2969, 6299, 9629])), parse::parse_slice_as_number(&[1487, 4817, 8147]));
+    }
+}

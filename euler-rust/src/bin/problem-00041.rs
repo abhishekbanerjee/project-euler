@@ -31,3 +31,13 @@ fn largest_pandigital_prime(digits: &[u8]) -> usize {
     }
     largest
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_largest_pandigital_prime() {
+	assert_eq!(largest_pandigital_prime(&[1, 2, 3, 4]), 4231);
+    }
+}
