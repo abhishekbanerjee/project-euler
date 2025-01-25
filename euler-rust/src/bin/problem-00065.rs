@@ -21,3 +21,13 @@ fn numerator_sum_e_convergent(limit: u8) -> u32 {
     }
     parse::split_number_to_digits::<BigUint, u32>(n).into_iter().sum()
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_numerator_sum_e_convergent() {
+	assert_eq!(numerator_sum_e_convergent(10), 17);
+    }
+}

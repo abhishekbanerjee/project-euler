@@ -55,3 +55,13 @@ fn smallest_cubic_permutations(permutations: u8) -> u64 {
 	seed += 1;
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_smallest_cubic_permutations() {
+	assert_eq!(smallest_cubic_permutations(3), 41063625);
+    }
+}

@@ -36,3 +36,13 @@ fn min_totient_permutation(limit: usize) -> usize {
     }
     min_n
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_min_totient_permutation() {
+	assert_eq!(min_totient_permutation(10usize.pow(5)), 75841);
+    }
+}

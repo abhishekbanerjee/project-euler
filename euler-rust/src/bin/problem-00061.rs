@@ -111,3 +111,13 @@ fn pentagonal(n: u32) -> u32 { n * (3 * n - 1) / 2 }
 fn hexagonal(n: u32) -> u32 { n * (2 * n - 1) }
 fn heptagonal(n: u32) -> u32 { n * (5 * n - 3) / 2 }
 fn octagonal(n: u32) -> u32 { n * (3 * n - 2) }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_cyclical_figurate_numbers() {
+	assert_eq!(cyclical_figurate_numbers(&[triangle, square, pentagonal]), 8128 + 2882 + 8281);
+    }
+}

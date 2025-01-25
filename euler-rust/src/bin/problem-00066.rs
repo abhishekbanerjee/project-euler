@@ -75,3 +75,13 @@ fn pell_fundamental_x(coefficients: &[u32]) -> BigUint {
     }
     n.clone()
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_largest_diophantine_x() {
+	assert_eq!(largest_diophantine_x(7), 5);
+    }
+}

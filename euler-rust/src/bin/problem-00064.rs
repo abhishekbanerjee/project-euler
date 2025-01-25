@@ -36,3 +36,13 @@ fn is_odd_period_square_root(n: u32) -> bool {
     }
     period % 2 == 1
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_odd_period_square_root() {
+	assert_eq!(odd_period_square_root(13), 4);
+    }
+}

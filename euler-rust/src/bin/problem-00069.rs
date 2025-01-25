@@ -24,3 +24,13 @@ fn totient_ratio_maximum(limit: u32) -> u32 {
     }
     n
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_totient_ratio_maximum() {
+	assert_eq!(totient_ratio_maximum(10), 6);
+    }
+}
