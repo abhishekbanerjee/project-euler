@@ -21,3 +21,14 @@ fn is_lychrel(n: BigUint) -> bool {
     }
     true
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_is_lychrel() {
+	assert!(is_lychrel(BigUint::from(196u8)));
+	assert!(!is_lychrel(BigUint::from(47u8)));
+    }
+}

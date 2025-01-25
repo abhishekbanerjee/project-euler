@@ -28,3 +28,13 @@ fn permuted_multiples(multiplier_limit: u8) -> usize {
 	candidate += 1;
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_permuted_multiples() {
+	assert_eq!(permuted_multiples(2), 125874);
+    }
+}

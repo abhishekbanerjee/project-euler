@@ -28,3 +28,14 @@ fn root_convergents_fractions(iterations: u32) -> u32 {
     }
     count
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_root_convergents_fractions() {
+	assert_eq!(root_convergents_fractions(7), 0);
+	assert_eq!(root_convergents_fractions(8), 1);
+    }
+}

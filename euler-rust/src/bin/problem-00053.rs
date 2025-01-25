@@ -37,3 +37,20 @@ fn combination(n: u64, m: u64) -> BigUint {
     }
     numerator / denominator
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_combination() {
+	assert_eq!(combination(5, 3), BigUint::from(10u8));
+    }
+
+    #[test]
+    fn test_combinatoric_selections() {
+	assert_eq!(combinatoric_selections(22, BigUint::from(1_000_000u32)), 0);
+	assert_ne!(combinatoric_selections(23, BigUint::from(1_000_000u32)), 0);
+    }
+}

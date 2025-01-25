@@ -134,3 +134,13 @@ fn concatenate(n1: usize, n2: usize) -> usize {
     s.push_str(&n2.to_string());
     s.parse::<usize>().unwrap()
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_prime_pair_sets() {
+	assert_eq!(prime_pair_sets(4), 792);
+    }
+}

@@ -31,3 +31,13 @@ fn spiral_primes_ratio(threshold: f32) -> usize {
 	step += 2;
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_spiral_primes_ratio() {
+	assert_eq!(spiral_primes_ratio(0.5), 11);
+    }
+}

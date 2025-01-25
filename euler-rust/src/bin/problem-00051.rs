@@ -48,3 +48,14 @@ fn prime_digit_replacements(limit: u8) -> usize {
 	idx += 1;
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_consecutive_prime_sum() {
+	assert_eq!(prime_digit_replacements(6), 13);
+	assert_eq!(prime_digit_replacements(7), 56003);
+    }
+}

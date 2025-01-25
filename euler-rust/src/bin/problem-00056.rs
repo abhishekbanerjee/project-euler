@@ -23,3 +23,14 @@ fn max_digital_sum(base_limit: u8, exponent_limit: u8) -> u32 {
     }
     max
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_consecutive_prime_sum() {
+	// Achieved for 9^9.
+	assert_eq!(max_digital_sum(10, 10), 45);
+    }
+}
