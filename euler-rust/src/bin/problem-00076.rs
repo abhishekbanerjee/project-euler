@@ -43,3 +43,13 @@ fn generate_gen_pentagonal(n: usize) -> Vec<usize> {
     }
     pentagonals
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_partition_but_one() {
+	assert_eq!(partition_but_one(5), 6);
+    }
+}

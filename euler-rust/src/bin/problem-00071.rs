@@ -28,3 +28,13 @@ fn three_seventh_left_neighbour(limit: u32) -> u32 {
     }
     closest_n as u32
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_three_seventh_left_neighbour() {
+	assert_eq!(three_seventh_left_neighbour(8), 2);
+    }
+}

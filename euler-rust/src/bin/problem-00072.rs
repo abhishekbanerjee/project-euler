@@ -31,3 +31,13 @@ fn fractions_count(limit: usize) -> usize {
     // Sum up the totients.
     totients.into_iter().sum()
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_fractions_count() {
+	assert_eq!(fractions_count(8), 21);
+    }
+}

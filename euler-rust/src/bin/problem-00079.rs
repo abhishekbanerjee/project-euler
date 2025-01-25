@@ -3,14 +3,18 @@ use euler_rust::utils::parse;
 use std::collections::HashSet;
 
 fn main() {
-    let passcode = shortest_passcode("resources/0079_keylog.txt");
+    let passcode = shortest_passcode_file("resources/0079_keylog.txt");
     println!("{}", passcode);
+}
+
+fn shortest_passcode_file(file_path: &str) -> String {
+    shortest_passcode(files::read_file(file_path).as_str())
 }
 
 // The login attempts describe directed paths between the digits. The
 // rest of the question reduces to finding a topological sort of this
 // (hopefully) directed acyclic graph. We implement Kahn's algorithm.
-fn shortest_passcode(file_path: &str) -> String {
+fn shortest_passcode(text: &str) -> String {
     // To keep track of incoming edges, so that we can find candidate
     // vertices to insert into our topological sort order.
     let mut indegrees = vec![0u8; 10];
@@ -19,7 +23,7 @@ fn shortest_passcode(file_path: &str) -> String {
     // A set of all vertices in the graph (needed since we're modeling
     // the previous data structures as vectors and not maps).
     let mut vertices: HashSet<u8> = HashSet::new();
-    build_graph(files::read_file(file_path).as_str(), &mut edges, &mut indegrees, &mut vertices);
+    build_graph(text, &mut edges, &mut indegrees, &mut vertices);
     // Initial set of vertices with zero indegrees. Will be updated as
     // we start removing edges from the graph.
     let mut no_incoming: HashSet<u8> = indegrees.iter().enumerate().filter(|(_, &d)| d == 0).map(|(v, _)| v as u8).collect();
@@ -49,10 +53,25 @@ fn build_graph(text: &str, edges: &mut Vec<HashSet<u8>>, indegrees: &mut Vec<u8>
 	    // multiple times in our text, and we only need to
 	    // increase the indegree for a vertex once per incoming
 	    // edge.
-	    if !edges[u as usize].contains(&v) {
-		edges[u as usize].insert(v);
+	    if edges[u as usize].insert(v) {
 		indegrees[v as usize] += 1;
 	    }
 	}
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_shortest_passcode() {
+	let text: &str = "\
+	317\n\
+	578\n\
+	532\n\
+	127\
+	";
+	assert_eq!(shortest_passcode(text).as_str(), "531278");
     }
 }

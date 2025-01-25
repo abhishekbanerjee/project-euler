@@ -18,3 +18,13 @@ fn fraction_count_between_third_and_half(limit: u32) -> u32 {
     }
     count
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_fraction_count_between_third_and_half() {
+	assert_eq!(fraction_count_between_third_and_half(8), 3);
+    }
+}

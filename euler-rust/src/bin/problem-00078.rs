@@ -43,3 +43,13 @@ fn generate_gen_pentagonal(pentagonals: &mut Vec<usize>) {
 	pentagonals.push(k * (3 * k + 1) / 2);
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_partition_divisible_by() {
+	assert_eq!(partition_divisible_by(7), 5);
+    }
+}

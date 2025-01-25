@@ -46,3 +46,13 @@ fn insert_singular(n: u32, singular_set: &mut HashSet<u32>, duplicates_set: &mut
 	singular_set.insert(n);
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_singular_pythagorean_triples() {
+	assert_eq!(singular_pythagorean_triples(50), 6);
+    }
+}

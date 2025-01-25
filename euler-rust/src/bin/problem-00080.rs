@@ -58,3 +58,13 @@ fn square_root_digits(n: u8, digits: usize) -> Vec<u32> {
 fn big_numbers() -> (BigUint, BigUint, BigUint, BigUint, BigUint) {
     (BigUint::ZERO, BigUint::from(1u8), BigUint::from(2u8), BigUint::from(10u8), BigUint::from(100u8))
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_square_root_digits_sum() {
+	assert_eq!(square_root_digits_sum(2, 100), 475);
+    }
+}

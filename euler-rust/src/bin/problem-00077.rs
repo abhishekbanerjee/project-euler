@@ -47,3 +47,13 @@ fn sum_of_prime_divisors(n: usize, prime_checker: &mut Primes) -> usize {
     }
     sum
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_prime_partition_over() {
+	assert_eq!(prime_partition_over(4), 10);
+    }
+}
