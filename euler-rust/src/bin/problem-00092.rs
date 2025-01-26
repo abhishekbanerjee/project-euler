@@ -89,3 +89,13 @@ fn factorial_product(nums: &[u8]) -> u32 {
 fn factorial(n: u32) -> u32 {
     (1..=n).product()
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_square_digit_89() {
+	assert_eq!(square_digit_89(2), 80);
+    }
+}

@@ -41,3 +41,15 @@ fn longest_amicable_chain(limit: u32) -> u32 {
     }
     longest_chain_representative
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_longest_amicable_chain() {
+	// The chain in the question is the longest chain below
+	// 100,000.
+	assert_eq!(longest_amicable_chain(100_000), 12496);
+    }
+}

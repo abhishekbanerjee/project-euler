@@ -33,3 +33,13 @@ fn blue_disks(limit: u64) -> u64 {
 	idx += 1;
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_blue_disks() {
+	assert_eq!(blue_disks(100), 85);
+    }
+}

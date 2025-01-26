@@ -17,3 +17,15 @@ fn almost_equilateral_sum(limit: u64) -> u64 {
     }
     perimeter_sum
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_almost_equilateral_sum() {
+	// The only such triangle with perimeter at most 20 is the
+	// 5-5-6 triangle.
+	assert_eq!(almost_equilateral_sum(20), 16);
+    }
+}

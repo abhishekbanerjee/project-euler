@@ -33,3 +33,14 @@ fn is_greater(a: (u32, u32), b: (u32, u32)) -> bool {
     // comparison, we don't care too deeply about decimal precision.
     (a.0 as f64).powf(a.1 as f64 / b.1 as f64) > b.0 as f64
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_is_greater() {
+	assert!(!is_greater((2, 11), (3, 7)));
+	assert!(is_greater((632382, 518061), (519432, 525806)));
+    }
+}

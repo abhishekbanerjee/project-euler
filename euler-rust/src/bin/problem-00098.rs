@@ -108,3 +108,15 @@ fn canonicalize(word: &str) -> String {
     char_vec.sort();
     char_vec.into_iter().collect::<String>()
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_anagram_square_pair() {
+	// 4 digit squares.
+	let squares: HashSet<u64> = (32u64..100).map(|n| n * n).collect(); 
+	assert_eq!(anagram_square_pair("CARE", "RACE", &squares), 9216);
+    }
+}

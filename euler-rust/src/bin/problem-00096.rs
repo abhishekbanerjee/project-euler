@@ -116,3 +116,24 @@ fn create_checkers(board: &Vec<Vec<u8>>, rows: &mut Vec<u32>, cols: &mut Vec<u32
 fn box_number(i: usize, j: usize) -> usize {
     i / 3 * 3 + j / 3
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_sudoku_solve() {
+	let mut board: Vec<Vec<u8>> = vec![
+	    vec![0,0,3,0,2,0,6,0,0],
+	    vec![9,0,0,3,0,5,0,0,1],
+	    vec![0,0,1,8,0,6,4,0,0],
+	    vec![0,0,8,1,0,2,9,0,0],
+	    vec![7,0,0,0,0,0,0,0,8],
+	    vec![0,0,6,7,0,8,2,0,0],
+	    vec![0,0,2,6,0,9,5,0,0],
+	    vec![8,0,0,2,0,3,0,0,9],
+	    vec![0,0,5,0,1,0,3,0,0]
+	];
+	assert_eq!(sudoku_solve(&mut board), 483);
+    }
+}

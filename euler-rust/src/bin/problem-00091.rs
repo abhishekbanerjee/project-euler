@@ -30,3 +30,13 @@ fn right_triangles(limit: u32) -> u32 {
 
     triangles
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_right_triangles() {
+	assert_eq!(right_triangles(2), 14);
+    }
+}

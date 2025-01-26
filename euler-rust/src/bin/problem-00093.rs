@@ -17,22 +17,27 @@ fn longest_arithmetic_series(num_digits: usize) -> u32 {
     let mut longest_series_length = 0u32;
     let digits: Vec<u8> = (0u8..=9).collect();
     for combination in combinations::combinations(digits.as_slice(), num_digits).iter() {
-	let series: HashSet<u32> = all_arithmetics(combination.as_slice())
-	    .into_iter()
-	    .filter(|&r| r > Ratio::from_integer(0) && r.is_integer())
-	    .map(|r| r.to_integer() as u32)
-	    .collect();
-	let mut series_length = 0u32;
-	loop {
-	    if !series.contains(&(series_length + 1)) { break; }
-	    series_length += 1;
-	}
+	let series_length = combination_series_length(combination.as_slice());
 	if series_length > longest_series_length {
 	    longest_series_length = series_length;
 	    longest_series = parse::parse_slice_as_number::<u8, u32>(combination.as_slice());
 	}
     }
     longest_series
+}
+
+fn combination_series_length(nums: &[u8]) -> u32 {
+    let series: HashSet<u32> = all_arithmetics(nums)
+	.into_iter()
+	.filter(|&r| r > Ratio::from_integer(0) && r.is_integer())
+	.map(|r| r.to_integer() as u32)
+	.collect();
+    let mut series_length = 0u32;
+    loop {
+	if !series.contains(&(series_length + 1)) { break; }
+	series_length += 1;
+    }
+    series_length
 }
 
 fn all_arithmetics(nums: &[u8]) -> HashSet<Ratio<i32>> {
@@ -69,4 +74,14 @@ fn ops(a: HashSet<Ratio<i32>>, b: HashSet<Ratio<i32>>) -> HashSet<Ratio<i32>> {
 	}
     }
     results
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_combination_series_length() {
+	assert_eq!(combination_series_length(&[1, 2, 3, 4]), 28);
+    }
 }
