@@ -4,8 +4,12 @@ use std::cmp;
 use std::collections::HashMap;
 
 fn main() {
-    let sum = path_sum_four("resources/0083_matrix.txt");
+    let sum = path_sum_four_file("resources/0083_matrix.txt");
     println!("{}", sum);
+}
+
+fn path_sum_four_file(file_path: &str) -> u32 {
+    path_sum_four(files::read_file(file_path).as_str())
 }
 
 // We solve this differently from the previous parts. In this one, we
@@ -13,8 +17,8 @@ fn main() {
 // adjacent positions being neighbours in the graph. The problem now
 // reduces to finding the shortest path in this graph, which we solve
 // using Dijkstra's algorithm.
-fn path_sum_four(file_path: &str) -> u32 {
-    let grid = parse::parse_grid(files::read_file(file_path).as_str(), ",");
+fn path_sum_four(text: &str) -> u32 {
+    let grid = parse::parse_grid(text, ",");
     let (m, n) = (grid.len(), grid[0].len());
     let mut distances = HashMap::from([((0usize, 0usize), grid[0][0])]);
     for i in 0..m {
@@ -33,3 +37,19 @@ fn path_sum_four(file_path: &str) -> u32 {
     }
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_path_sum_four() {
+	let text = "\
+	131,673,234,103,18\n\
+	201,96,342,965,150\n\
+	630,803,746,422,111\n\
+	537,699,497,121,956\n\
+	805,732,524,37,331\
+	";
+	assert_eq!(path_sum_four(text), 2297);
+    }
+}

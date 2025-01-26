@@ -26,3 +26,13 @@ fn limit_for_cuboids_numbering(num: u32) -> u32 {
     }
     a
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_limit_for_cuboids_numbering() {
+	assert_eq!(limit_for_cuboids_numbering(2000), 100);
+    }
+}

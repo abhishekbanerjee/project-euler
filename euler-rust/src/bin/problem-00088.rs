@@ -37,3 +37,13 @@ fn build_product_sums(n: u32, factor_sum: u32, factors: u32, first: u32, cache: 
 	build_product_sums(n * i, factor_sum + i, factors + 1, i, cache);
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_product_sum_sum() {
+	assert_eq!(product_sum_sum(6), 30);
+    }
+}

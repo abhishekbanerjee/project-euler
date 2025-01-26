@@ -37,3 +37,13 @@ fn contains(n: u8, set: &[u8]) -> bool {
 	set.contains(&n)
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_valid() {
+	assert!(valid(&[(0,1), (0,4), (0,9), (1,6), (2,5), (3,6), (4,9), (6,4), (8,1)], &[0, 5, 6, 7, 8, 9], &[1, 2, 3, 4, 8, 9]));
+    }
+}

@@ -70,3 +70,13 @@ fn digit_to_roman(d: u32, ten: char, five: char, unit: char) -> String {
     }
     roman
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_roman_chars_saved() {
+	assert_eq!(roman_chars_saved("XIIIIII"), 4);
+    }
+}

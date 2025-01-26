@@ -37,3 +37,13 @@ fn prime_power_sums_below(threshold: usize) -> usize {
     }
     remainders.len()
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_prime_power_sums_below() {
+	assert_eq!(prime_power_sums_below(50), 4);
+    }
+}

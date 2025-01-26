@@ -158,3 +158,13 @@ fn encode(square: usize, doubles: usize) -> usize {
 fn decode(idx: usize) -> (usize, usize) {
     (idx % NUM_SQUARES, idx / NUM_SQUARES)
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_monopoly_most_popular() {
+	assert_eq!(monopoly_most_popular(6).as_str(), "102400");
+    }
+}

@@ -46,3 +46,13 @@ fn reverse_triangle(n: u32) -> u32 {
 fn gap(m: u32, n: u32) -> u32 {
     (m as i32 - n as i32).abs() as u32
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_rectangles_count_closest_to() {
+	assert_eq!(rectangles_count_closest_to(18), 6);
+    }
+}
