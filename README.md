@@ -115,3 +115,4 @@ $ cargo test --bin problem-00001 # to run unit tests
 | 98   | [Anagramic Squares](https://projecteuler.net/problem=98)     | [problem-00098.rs](euler-rust/src/bin/problem-00098.rs) | 18769            |
 | 99   | [Largest Exponential](https://projecteuler.net/problem=99)   | [problem-00099.rs](euler-rust/src/bin/problem-00099.rs) | 709              |
 | 100  | [Arranged Probability](https://projecteuler.net/problem=100) | [problem-00100.rs](euler-rust/src/bin/problem-00100.rs) | 756872327473     |
+| 101  | [Optimum Polynomial](https://projecteuler.net/problem=101)   | [problem-00101.rs](euler-rust/src/bin/problem-00101.rs) | 37076114526      |
